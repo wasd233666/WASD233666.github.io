@@ -18,15 +18,15 @@
   <meta name="author" content="WASD">
   <meta name="keywords" content="">
   
-    <meta name="description" content="PTA基础编程题集-编程题7-1 厘米换算英尺英寸（15分）如果已知英制长度的英尺foot和英寸inch的值，那么对应的米是(foot+inch&#x2F;12)×0.3048。现在，如果用户输入的是厘米数，那么对应英制长度的英尺和英寸是多少呢？别忘了1英尺等于12英寸。 输入格式： 输入在一行中给出1个正整数，单位是厘米。 输出格式： 在一行中输出这个厘米数对应英制长度的英尺和英寸的整数值，中间">
+    <meta name="description" content="PTA基础编程题集-编程题 7-1 厘米换算英尺英寸（15分） 如果已知英制长度的英尺foot和英寸inch的值，那么对应的米是(foot+inch&#x2F;12)×0.3048。现在，如果用户输入的是厘米数，那么对应英制长度的英尺和英寸是多少呢？别忘了1英尺等于12英寸。 输入格式： 输入在一行中给出1个正整数，单位是厘米。 输出格式： 在一行中输出这个厘米数对应英制长度的英尺和英寸的整数值，中间用空格">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PTA基础编程题集-编程题">
 <meta property="og:url" content="http://example.com/2024/05/12/PTA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE%E9%9B%86-%E7%BC%96%E7%A8%8B%E9%A2%98%EF%BC%88Python3%E5%AE%9E%E7%8E%B0%EF%BC%89/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="PTA基础编程题集-编程题7-1 厘米换算英尺英寸（15分）如果已知英制长度的英尺foot和英寸inch的值，那么对应的米是(foot+inch&#x2F;12)×0.3048。现在，如果用户输入的是厘米数，那么对应英制长度的英尺和英寸是多少呢？别忘了1英尺等于12英寸。 输入格式： 输入在一行中给出1个正整数，单位是厘米。 输出格式： 在一行中输出这个厘米数对应英制长度的英尺和英寸的整数值，中间">
+<meta property="og:description" content="PTA基础编程题集-编程题 7-1 厘米换算英尺英寸（15分） 如果已知英制长度的英尺foot和英寸inch的值，那么对应的米是(foot+inch&#x2F;12)×0.3048。现在，如果用户输入的是厘米数，那么对应英制长度的英尺和英寸是多少呢？别忘了1英尺等于12英寸。 输入格式： 输入在一行中给出1个正整数，单位是厘米。 输出格式： 在一行中输出这个厘米数对应英制长度的英尺和英寸的整数值，中间用空格">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-11T16:20:00.000Z">
-<meta property="article:modified_time" content="2024-05-14T10:49:56.851Z">
+<meta property="article:modified_time" content="2024-05-14T11:29:22.536Z">
 <meta property="article:author" content="WASD">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -295,7 +295,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          9.3k 字
+          9.2k 字
         
       </span>
     
@@ -307,7 +307,7 @@
         
         
           <!-- compatible with older versions-->
-          78 分钟
+          77 分钟
         
       </span>
     
@@ -349,7 +349,9 @@
             
               <div class="markdown-body">
                 
-                <h1 id="PTA基础编程题集-编程题"><a href="#PTA基础编程题集-编程题" class="headerlink" title="PTA基础编程题集-编程题"></a>PTA基础编程题集-编程题</h1><h2 id="7-1-厘米换算英尺英寸（15分）"><a href="#7-1-厘米换算英尺英寸（15分）" class="headerlink" title="7-1 厘米换算英尺英寸（15分）"></a>7-1 厘米换算英尺英寸（15分）</h2><p>如果已知英制长度的英尺foot和英寸inch的值，那么对应的米是(foot+inch&#x2F;12)×0.3048。现在，如果用户输入的是厘米数，那么对应英制长度的英尺和英寸是多少呢？别忘了1英尺等于12英寸。</p>
+                <h1>PTA基础编程题集-编程题</h1>
+<h2 id="7-1-厘米换算英尺英寸（15分）">7-1 厘米换算英尺英寸（15分）</h2>
+<p>如果已知英制长度的英尺foot和英寸inch的值，那么对应的米是(foot+inch/12)×0.3048。现在，如果用户输入的是厘米数，那么对应英制长度的英尺和英寸是多少呢？别忘了1英尺等于12英寸。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出1个正整数，单位是厘米。</p>
 <p><strong>输出格式：</strong></p>
@@ -364,11 +366,13 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">cm = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>foot = cm / <span class="hljs-number">100.0</span> / <span class="hljs-number">0.3048</span><br>inch = (foot - <span class="hljs-built_in">int</span>(foot)) * <span class="hljs-number">12</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;<span class="hljs-built_in">int</span>(foot)&#125;</span> <span class="hljs-subst">&#123;<span class="hljs-built_in">int</span>(inch)&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-2-然后是几点（15分）"><a href="#7-2-然后是几点（15分）" class="headerlink" title="7-2 然后是几点（15分）"></a>7-2 然后是几点（15分）</h2><p>有时候人们用四位数字表示一个时间，比如 <code>1106</code> 表示 11 点零 6 分。现在，你的程序要根据起始时间和流逝的时间计算出终止时间。</p>
-<p>读入两个数字，第一个数字以这样的四位数字表示当前时间，第二个数字表示分钟数，计算当前时间经过那么多分钟后是几点，结果也表示为四位数字。当小时为个位数时，没有前导的零，例如<br>5 点 30 分表示为 <code>530</code>；0 点 30 分表示为 <code>030</code>。注意，第二个数字表示的分钟数可能超过 60，也可能是负数。</p>
+<h2 id="7-2-然后是几点（15分）">7-2 然后是几点（15分）</h2>
+<p>有时候人们用四位数字表示一个时间，比如 <code>1106</code> 表示 11 点零 6 分。现在，你的程序要根据起始时间和流逝的时间计算出终止时间。</p>
+<p>读入两个数字，第一个数字以这样的四位数字表示当前时间，第二个数字表示分钟数，计算当前时间经过那么多分钟后是几点，结果也表示为四位数字。当小时为个位数时，没有前导的零，例如<br>
+5 点 30 分表示为 <code>530</code>；0 点 30 分表示为 <code>030</code>。注意，第二个数字表示的分钟数可能超过 60，也可能是负数。</p>
 <p><strong>输入格式：</strong></p>
-<p>输入在一行中给出 2 个整数，分别是四位数字表示的起始时间、以及流逝的分钟数，其间以空格分隔。注意：在起始时间中，当小时为个位数时，没有前导的零，即 5 点<br>30 分表示为 <code>530</code>；0 点 30 分表示为 <code>030</code>。流逝的分钟数可能超过 60，也可能是负数。</p>
+<p>输入在一行中给出 2 个整数，分别是四位数字表示的起始时间、以及流逝的分钟数，其间以空格分隔。注意：在起始时间中，当小时为个位数时，没有前导的零，即 5 点<br>
+30 分表示为 <code>530</code>；0 点 30 分表示为 <code>030</code>。流逝的分钟数可能超过 60，也可能是负数。</p>
 <p><strong>输出格式：</strong></p>
 <p>输出不多于四位数字表示的终止时间，当小时为个位数时，没有前导的零。题目保证起始时间和终止时间在同一天内。</p>
 <p><strong>输入样例：</strong></p>
@@ -381,8 +385,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">begin, t = <span class="hljs-built_in">input</span>().split()<br>h, m = <span class="hljs-built_in">int</span>(begin[:-<span class="hljs-number">2</span>]), <span class="hljs-built_in">int</span>(begin[-<span class="hljs-number">2</span>:])<br>h += <span class="hljs-built_in">int</span>(t) // <span class="hljs-number">60</span><br>m += <span class="hljs-built_in">int</span>(t) - (<span class="hljs-built_in">int</span>(t) // <span class="hljs-number">60</span>)*<span class="hljs-number">60</span><br><span class="hljs-keyword">if</span> m &gt;= <span class="hljs-number">60</span>:<br>    h += m // <span class="hljs-number">60</span><br>    m -= (m//<span class="hljs-number">60</span>) * <span class="hljs-number">60</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;h&#125;</span><span class="hljs-subst">&#123;m:02d&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-3-逆序的三位数（10分）"><a href="#7-3-逆序的三位数（10分）" class="headerlink" title="7-3 逆序的三位数（10分）"></a>7-3 逆序的三位数（10分）</h2><p>程序每次读入一个正3位数，然后输出按位逆序的数字。注意：当输入的数字含有结尾的0时，输出不应带有前导的0。比如输入700，输出应该是7。</p>
+<h2 id="7-3-逆序的三位数（10分）">7-3 逆序的三位数（10分）</h2>
+<p>程序每次读入一个正3位数，然后输出按位逆序的数字。注意：当输入的数字含有结尾的0时，输出不应带有前导的0。比如输入700，输出应该是7。</p>
 <p><strong>输入格式：</strong></p>
 <p>每个测试是一个3位的正整数。</p>
 <p><strong>输出格式：</strong></p>
@@ -397,8 +401,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">input</span>()<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">int</span>(n[::-<span class="hljs-number">1</span>]))<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-4-BCD解密（10分）"><a href="#7-4-BCD解密（10分）" class="headerlink" title="7-4 BCD解密（10分）"></a>7-4 BCD解密（10分）</h2><p>BCD数是用一个字节来表达两位十进制的数，每四个比特表示一位。所以如果一个BCD数的十六进制是0x12，它表达的就是十进制的12。但是小明没学过BCD，把所有的BCD数都当作二进制数转换成十进制输出了。于是BCD的0x12被输出成了十进制的18了！</p>
+<h2 id="7-4-BCD解密（10分）">7-4 BCD解密（10分）</h2>
+<p>BCD数是用一个字节来表达两位十进制的数，每四个比特表示一位。所以如果一个BCD数的十六进制是0x12，它表达的就是十进制的12。但是小明没学过BCD，把所有的BCD数都当作二进制数转换成十进制输出了。于是BCD的0x12被输出成了十进制的18了！</p>
 <p>现在，你的程序要读入这个错误的十进制数，然后输出正确的十进制数。提示：你可以把18转换回0x12，然后再转换回12。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出一个[0, 153]范围内的正整数，保证能转换回有效的BCD数，也就是说这个整数转换成十六进制时不会出现A-F的数字。</p>
@@ -414,19 +418,27 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>s = <span class="hljs-built_in">hex</span>(n)<br><span class="hljs-built_in">print</span>(s[<span class="hljs-number">2</span>:])<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-5-表格输出-（5分）"><a href="#7-5-表格输出-（5分）" class="headerlink" title="7-5 表格输出 （5分）"></a>7-5 表格输出 （5分）</h2><p>本题要求编写程序，按照规定格式输出表格。</p>
+<h2 id="7-5-表格输出-（5分）">7-5 表格输出 （5分）</h2>
+<p>本题要求编写程序，按照规定格式输出表格。</p>
 <p>输入格式：</p>
 <p>本题目没有输入。</p>
 <p>输出格式：</p>
 <p>要求严格按照给出的格式输出下列表格：</p>
 <blockquote>
-<p>-———————————–<br> Province Area(km2) Pop.(10K)<br> -———————————–<br> Anhui 139600.00 6461.00<br> Beijing 16410.54 1180.70<br> Chongqing 82400.00 3144.23<br> Shanghai 6340.50 1360.26<br> Zhejiang 101800.00 4894.00<br> -———————————–</p>
+<p>------------------------------------<br>
+Province Area(km2) Pop.(10K)<br>
+------------------------------------<br>
+Anhui 139600.00 6461.00<br>
+Beijing 16410.54 1180.70<br>
+Chongqing 82400.00 3144.23<br>
+Shanghai 6340.50 1360.26<br>
+Zhejiang 101800.00 4894.00<br>
+------------------------------------</p>
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;------------------------------------&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Province      Area(km2)   Pop.(10K)&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;------------------------------------&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Anhui         139600.00   6461.00&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Beijing        16410.54   1180.70&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Chongqing      82400.00   3144.23&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Shanghai        6340.50   1360.26&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Zhejiang      101800.00   4894.00&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;------------------------------------&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-6-混合类型数据格式化输入-（5分）"><a href="#7-6-混合类型数据格式化输入-（5分）" class="headerlink" title="7-6 混合类型数据格式化输入 （5分）"></a>7-6 混合类型数据格式化输入 （5分）</h2><p>本题要求编写程序，顺序读入浮点数1、整数、字符、浮点数2，再按照字符、整数、浮点数1、浮点数2的顺序输出。</p>
+<h2 id="7-6-混合类型数据格式化输入-（5分）">7-6 混合类型数据格式化输入 （5分）</h2>
+<p>本题要求编写程序，顺序读入浮点数1、整数、字符、浮点数2，再按照字符、整数、浮点数1、浮点数2的顺序输出。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中顺序给出浮点数1、整数、字符、浮点数2，其间以1个空格分隔。</p>
 <p><strong>输出格式：</strong></p>
@@ -441,8 +453,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">a, b, c, d = <span class="hljs-built_in">input</span>().split()<br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;c&#125;</span> <span class="hljs-subst">&#123;b&#125;</span> <span class="hljs-subst">&#123;<span class="hljs-built_in">float</span>(a):<span class="hljs-number">.2</span>f&#125;</span> <span class="hljs-subst">&#123;<span class="hljs-built_in">float</span>(d):<span class="hljs-number">.2</span>f&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-7-12-24小时制（15分）"><a href="#7-7-12-24小时制（15分）" class="headerlink" title="7-7 12-24小时制（15分）"></a>7-7 12-24小时制（15分）</h2><p>编写一个程序，要求用户输入24小时制的时间，然后显示12小时制的时间。</p>
+<h2 id="7-7-12-24小时制（15分）">7-7 12-24小时制（15分）</h2>
+<p>编写一个程序，要求用户输入24小时制的时间，然后显示12小时制的时间。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出带有中间的<code>:</code>符号（半角的冒号）的24小时制的时间，如<code>12:34</code>表示12点34分。当小时或分钟数小于10时，均没有前导的零，如<code>5:6</code>表示5点零6分。</p>
 <p><strong>提示：</strong> 在<code>scanf</code>的格式字符串中加入<code>:</code>，让<code>scanf</code>来处理这个冒号。</p>
@@ -458,8 +470,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">h, m = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split(<span class="hljs-string">&#x27;:&#x27;</span>))<br><span class="hljs-keyword">if</span> h &gt;= <span class="hljs-number">13</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;h-<span class="hljs-number">12</span>&#125;</span>:<span class="hljs-subst">&#123;m&#125;</span> PM&quot;</span>)<br><span class="hljs-keyword">elif</span> h == <span class="hljs-number">12</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;h&#125;</span>:<span class="hljs-subst">&#123;m&#125;</span> PM&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;h&#125;</span>:<span class="hljs-subst">&#123;m&#125;</span> AM&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-8-超速判断（10分）"><a href="#7-8-超速判断（10分）" class="headerlink" title="7-8 超速判断（10分）"></a>7-8 超速判断（10分）</h2><p>模拟交通警察的雷达测速仪。输入汽车速度，如果速度超出60 mph，则显示“Speeding”，否则显示“OK”。</p>
+<h2 id="7-8-超速判断（10分）">7-8 超速判断（10分）</h2>
+<p>模拟交通警察的雷达测速仪。输入汽车速度，如果速度超出60 mph，则显示“Speeding”，否则显示“OK”。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出1个不超过500的非负整数，即雷达测到的车速。</p>
 <p><strong>输出格式：</strong></p>
@@ -482,8 +494,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><span class="hljs-keyword">if</span> n &gt; <span class="hljs-number">60</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Speed: <span class="hljs-subst">&#123;n&#125;</span> - Speeding&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Speed: <span class="hljs-subst">&#123;n&#125;</span> - OK&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-9-用天平找小球（10分）"><a href="#7-9-用天平找小球（10分）" class="headerlink" title="7-9 用天平找小球（10分）"></a>7-9 用天平找小球（10分）</h2><p>三个球A、B、C，大小形状相同且其中有一个球与其他球重量不同。要求找出这个不一样的球。</p>
+<h2 id="7-9-用天平找小球（10分）">7-9 用天平找小球（10分）</h2>
+<p>三个球A、B、C，大小形状相同且其中有一个球与其他球重量不同。要求找出这个不一样的球。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出3个正整数，顺序对应球A、B、C的重量。</p>
 <p><strong>输出格式：</strong></p>
@@ -498,8 +510,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">a, b, c = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br><span class="hljs-keyword">if</span> a == b:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;C&#x27;</span>)<br><span class="hljs-keyword">elif</span> b == c:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;A&#x27;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;B&#x27;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-10-计算工资（15分）"><a href="#7-10-计算工资（15分）" class="headerlink" title="7-10 计算工资（15分）"></a>7-10 计算工资（15分）</h2><p>某公司员工的工资计算方法如下：一周内工作时间不超过40小时，按正常工作时间计酬；超出40小时的工作时间部分，按正常工作时间报酬的1.5倍计酬。员工按进公司时间分为新职工和老职工，进公司不少于5年的员工为老职工，5年以下的为新职工。新职工的正常工资为30元&#x2F;小时，老职工的正常工资为50元&#x2F;小时。请按该计酬方式计算员工的工资。</p>
+<h2 id="7-10-计算工资（15分）">7-10 计算工资（15分）</h2>
+<p>某公司员工的工资计算方法如下：一周内工作时间不超过40小时，按正常工作时间计酬；超出40小时的工作时间部分，按正常工作时间报酬的1.5倍计酬。员工按进公司时间分为新职工和老职工，进公司不少于5年的员工为老职工，5年以下的为新职工。新职工的正常工资为30元/小时，老职工的正常工资为50元/小时。请按该计酬方式计算员工的工资。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出2个正整数，分别为某员工入职年数和周工作时间，其间以空格分隔。</p>
 <p><strong>输出格式：</strong></p>
@@ -522,8 +534,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python">year, time = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br><span class="hljs-keyword">if</span> year &lt; <span class="hljs-number">5</span>:<br>    <span class="hljs-keyword">if</span> time &lt;= <span class="hljs-number">40</span>:<br>        money = time * <span class="hljs-number">30</span><br>    <span class="hljs-keyword">else</span>:<br>        money = <span class="hljs-number">40</span>*<span class="hljs-number">30</span> + (time-<span class="hljs-number">40</span>)*<span class="hljs-number">30</span>*<span class="hljs-number">1.5</span><br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-keyword">if</span> time &lt;= <span class="hljs-number">40</span>:<br>        money = time * <span class="hljs-number">50</span><br>    <span class="hljs-keyword">else</span>:<br>        money = <span class="hljs-number">40</span>*<span class="hljs-number">50</span> + (time-<span class="hljs-number">40</span>)*<span class="hljs-number">50</span>*<span class="hljs-number">1.5</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;money:<span class="hljs-number">.2</span>f&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-11-分段计算居民水费（10分）"><a href="#7-11-分段计算居民水费（10分）" class="headerlink" title="7-11 分段计算居民水费（10分）"></a>7-11 分段计算居民水费（10分）</h2><p>为鼓励居民节约用水，自来水公司采取按用水量阶梯式计价的办法，居民应交水费y（元）与月用水量x（吨）相关：当x不超过15吨时，y&#x3D;4x&#x2F;3；超过后，y&#x3D;2.5x−17.5。请编写程序实现水费的计算。</p>
+<h2 id="7-11-分段计算居民水费（10分）">7-11 分段计算居民水费（10分）</h2>
+<p>为鼓励居民节约用水，自来水公司采取按用水量阶梯式计价的办法，居民应交水费y（元）与月用水量x（吨）相关：当x不超过15吨时，y=4x/3；超过后，y=2.5x−17.5。请编写程序实现水费的计算。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出非负实数x。</p>
 <p><strong>输出格式：</strong></p>
@@ -546,15 +558,15 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">x = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>())<br><span class="hljs-keyword">if</span> x &lt;= <span class="hljs-number">15</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;<span class="hljs-number">4</span>*x/<span class="hljs-number">3</span>:<span class="hljs-number">.2</span>f&#125;</span>&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;<span class="hljs-number">2.5</span>*x-<span class="hljs-number">17.5</span>:<span class="hljs-number">.2</span>f&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-12-两个数的简单计算器（10分）"><a href="#7-12-两个数的简单计算器（10分）" class="headerlink" title="7-12 两个数的简单计算器（10分）"></a>7-12 两个数的简单计算器（10分）</h2><p>本题要求编写一个简单计算器程序，可根据输入的运算符，对2个整数进行加、减、乘、除或求余运算。题目保证输入和输出均不超过整型范围。</p>
+<h2 id="7-12-两个数的简单计算器（10分）">7-12 两个数的简单计算器（10分）</h2>
+<p>本题要求编写一个简单计算器程序，可根据输入的运算符，对2个整数进行加、减、乘、除或求余运算。题目保证输入和输出均不超过整型范围。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中依次输入操作数1、运算符、操作数2，其间以1个空格分隔。操作数的数据类型为整型，且保证除法和求余的分母非零。</p>
 <p><strong>输出格式：</strong></p>
 <p>当运算符为<code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>、<code>%</code>时，在一行输出相应的运算结果。若输入是非法符号（即除了加、减、乘、除和求余五种运算符以外的其他符号）则输出<code>ERROR</code>。</p>
 <p><strong>输入样例1：</strong></p>
 <blockquote>
-<p>-7 &#x2F; 2</p>
+<p>-7 / 2</p>
 </blockquote>
 <p><strong>输出样例1：</strong></p>
 <blockquote>
@@ -570,8 +582,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python">a, b, c= <span class="hljs-built_in">input</span>().split()<br>a, c = <span class="hljs-built_in">int</span>(a), <span class="hljs-built_in">int</span>(c)<br><span class="hljs-keyword">if</span> b == <span class="hljs-string">&#x27;+&#x27;</span>:<br>    <span class="hljs-built_in">print</span>(a + c)<br><span class="hljs-keyword">elif</span> b == <span class="hljs-string">&#x27;-&#x27;</span>:<br>    <span class="hljs-built_in">print</span>(a - c)<br><span class="hljs-keyword">elif</span> b == <span class="hljs-string">&#x27;*&#x27;</span>:<br>    <span class="hljs-built_in">print</span>(a * c)<br><span class="hljs-keyword">elif</span> b == <span class="hljs-string">&#x27;/&#x27;</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">int</span>(a / c))<br><span class="hljs-keyword">elif</span> b == <span class="hljs-string">&#x27;%&#x27;</span>:<br>    <span class="hljs-built_in">print</span>(a % c)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;ERROR&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-13-日K蜡烛图（15分）"><a href="#7-13-日K蜡烛图（15分）" class="headerlink" title="7-13 日K蜡烛图（15分）"></a>7-13 日K蜡烛图（15分）</h2><p>股票价格涨跌趋势，常用蜡烛图技术中的K线图来表示，分为按日的日K线、按周的周K线、按月的月K线等。以日K线为例，每天股票价格从开盘到收盘走完一天，对应一根蜡烛小图，要表示四个价格：开盘价格Open（早上刚刚开始开盘买卖成交的第1笔价格）、收盘价格Close（下午收盘时最后一笔成交的价格）、中间的最高价High和最低价Low。</p>
+<h2 id="7-13-日K蜡烛图（15分）">7-13 日K蜡烛图（15分）</h2>
+<p>股票价格涨跌趋势，常用蜡烛图技术中的K线图来表示，分为按日的日K线、按周的周K线、按月的月K线等。以日K线为例，每天股票价格从开盘到收盘走完一天，对应一根蜡烛小图，要表示四个价格：开盘价格Open（早上刚刚开始开盘买卖成交的第1笔价格）、收盘价格Close（下午收盘时最后一笔成交的价格）、中间的最高价High和最低价Low。</p>
 <p>如果Close&lt;Open，表示为“BW-Solid”（即“实心蓝白蜡烛”）；如果Close&gt;Open，表示为“R-Hollow”（即“空心红蜡烛”）；如果Open等于Close，则为“R-Cross”（即“十字红蜡烛”）。如果Low比Open和Close低，称为“Lower Shadow”（即“有下影线”），如果High比Open和Close高，称为“Upper Shadow”（即“有上影线”）。请编程序，根据给定的四个价格组合，判断当日的蜡烛是一根什么样的蜡烛。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出4个正实数，分别对应Open、High、Low、Close，其间以空格分隔。</p>
@@ -603,8 +615,8 @@
 </blockquote>
 <p>题解：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python">o, h, l, c = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">float</span>, <span class="hljs-built_in">input</span>().split())<br><span class="hljs-keyword">if</span> c &lt; o:<br>    res = <span class="hljs-string">&quot;BW-Solid&quot;</span><br><span class="hljs-keyword">elif</span> c &gt; o:<br>    res = <span class="hljs-string">&quot;R-Hollow&quot;</span><br><span class="hljs-keyword">else</span>:<br>    res = <span class="hljs-string">&quot;R-Cross&quot;</span><br>    <br><span class="hljs-keyword">def</span> <span class="hljs-title function_">func</span>():<br>    <span class="hljs-keyword">if</span> l &lt; o <span class="hljs-keyword">and</span> l &lt; c:<br>        <span class="hljs-keyword">if</span> h &gt; o <span class="hljs-keyword">and</span> h &gt; c:<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot; with Lower Shadow and Upper Shadow&quot;</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot; with Lower Shadow&quot;</span><br>    <span class="hljs-keyword">elif</span> h &gt; o <span class="hljs-keyword">and</span> h &gt; c:<br>        <span class="hljs-keyword">if</span> l &lt; o <span class="hljs-keyword">and</span> l &lt; c:<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot; with Lower Shadow and Upper Shadow&quot;</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot; with Upper Shadow&quot;</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-built_in">print</span>(res+func())<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-14-求整数段和（15分）"><a href="#7-14-求整数段和（15分）" class="headerlink" title="7-14 求整数段和（15分）"></a>7-14 求整数段和（15分）</h2><p>给定两个整数A和B，输出从A到B的所有整数以及这些数的和。</p>
+<h2 id="7-14-求整数段和（15分）">7-14 求整数段和（15分）</h2>
+<p>给定两个整数A和B，输出从A到B的所有整数以及这些数的和。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出2个整数A和B，其中−100≤A≤B≤100，其间以空格分隔。</p>
 <p><strong>输出格式：</strong></p>
@@ -615,13 +627,17 @@
 </blockquote>
 <p><strong>输出样例：</strong></p>
 <blockquote>
-<p>-3 -2 -1 0 1<br> 2 3 4 5 6<br> 7 8<br> Sum &#x3D; 30</p>
+<p>-3 -2 -1 0 1<br>
+2 3 4 5 6<br>
+7 8<br>
+Sum = 30</p>
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">a, b = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>sum1 = <span class="hljs-number">0</span><br>cnt = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(a, b+<span class="hljs-number">1</span>):<br>    sum1 = i + sum1<br>    <span class="hljs-keyword">if</span> cnt % <span class="hljs-number">5</span> == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> cnt != <span class="hljs-number">0</span>:<br>        <span class="hljs-built_in">print</span>()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;i: &gt;<span class="hljs-number">5</span>&#125;</span>&quot;</span>, end=<span class="hljs-string">&#x27;&#x27;</span>)<br>    cnt = cnt + <span class="hljs-number">1</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;\nSum = <span class="hljs-subst">&#123;sum1&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-15-计算圆周率（15分）"><a href="#7-15-计算圆周率（15分）" class="headerlink" title="7-15 计算圆周率（15分）"></a>7-15 计算圆周率（15分）</h2><p>根据下面关系式，求圆周率的值，直到最后一项的值小于给定阈值。</p>
-<p>$$<br>\frac{\pi }{2}&#x3D;1+\frac{1}{3}+\frac{2!}{3<em>5}+\frac{3!}{3</em>5<em>7}+\cdot \cdot \cdot +\frac{n!}{3</em>5<em>7</em>\cdot \cdot\cdot *(2n+1) }+\cdot \cdot \cdot<br>$$</p>
+<h2 id="7-15-计算圆周率（15分）">7-15 计算圆周率（15分）</h2>
+<p>根据下面关系式，求圆周率的值，直到最后一项的值小于给定阈值。</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mfrac><mrow><mn>2</mn><mo stretchy="false">!</mo></mrow><mrow><mn>3</mn><mo>∗</mo><mn>5</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>3</mn><mo stretchy="false">!</mo></mrow><mrow><mn>3</mn><mo>∗</mo><mn>5</mn><mo>∗</mo><mn>7</mn></mrow></mfrac><mo>+</mo><mo>⋅</mo><mo>⋅</mo><mo>⋅</mo><mo>+</mo><mfrac><mrow><mi>n</mi><mo stretchy="false">!</mo></mrow><mrow><mn>3</mn><mo>∗</mo><mn>5</mn><mo>∗</mo><mn>7</mn><mo>∗</mo><mo>⋅</mo><mo>⋅</mo><mo>⋅</mo><mo>∗</mo><mo stretchy="false">(</mo><mn>2</mn><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mo>⋅</mo><mo>⋅</mo><mo>⋅</mo></mrow><annotation encoding="application/x-tex">\frac{\pi }{2}=1+\frac{1}{3}+\frac{2!}{3*5}+\frac{3!}{3*5*7}+\cdot \cdot \cdot +\frac{n!}{3*5*7*\cdot \cdot\cdot *(2n+1) }+\cdot \cdot \cdot
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.7936em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">5</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mclose">!</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">7</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span><span class="mclose">!</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4445em;"></span><span class="mord">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.3074em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">7</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="mclose">!</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4445em;"></span><span class="mord">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4445em;"></span><span class="mord">⋅</span></span></span></span></span></p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出小于1的阈值。</p>
 <p><strong>输出格式：</strong></p>
@@ -636,8 +652,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">door = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>())<br>i, fac, mul, pi = <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span><br><span class="hljs-keyword">while</span> fac / mul &gt;= door:<br>    fac *= i<br>    mul *= (<span class="hljs-number">2</span>*i + <span class="hljs-number">1</span>)<br>    pi += fac / mul<br>    i += <span class="hljs-number">1</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;pi*<span class="hljs-number">2</span>:<span class="hljs-number">.6</span>f&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-16-求符合给定条件的整数集（15分）"><a href="#7-16-求符合给定条件的整数集（15分）" class="headerlink" title="7-16 求符合给定条件的整数集（15分）"></a>7-16 求符合给定条件的整数集（15分）</h2><p>给定不超过6的正整数A，考虑从A开始的连续4个数字。请输出所有由它们组成的无重复数字的3位数。</p>
+<h2 id="7-16-求符合给定条件的整数集（15分）">7-16 求符合给定条件的整数集（15分）</h2>
+<p>给定不超过6的正整数A，考虑从A开始的连续4个数字。请输出所有由它们组成的无重复数字的3位数。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出A。</p>
 <p><strong>输出格式：</strong></p>
@@ -648,12 +664,15 @@
 </blockquote>
 <p><strong>输出样例：</strong></p>
 <blockquote>
-<p>234 235 243 245 253 254<br> 324 325 342 345 352 354<br> 423 425 432 435 452 453<br> 523 524 532 534 542 543</p>
+<p>234 235 243 245 253 254<br>
+324 325 342 345 352 354<br>
+423 425 432 435 452 453<br>
+523 524 532 534 542 543</p>
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python">a = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>cnt = <span class="hljs-number">1</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(a, a+<span class="hljs-number">4</span>):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(a, a+<span class="hljs-number">4</span>):<br>        <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(a, a+<span class="hljs-number">4</span>):<br>            <span class="hljs-keyword">if</span> i != j <span class="hljs-keyword">and</span> i != k <span class="hljs-keyword">and</span> j != k:<br>                num = i*<span class="hljs-number">100</span> + j*<span class="hljs-number">10</span> + k<br>                <span class="hljs-keyword">if</span> cnt % <span class="hljs-number">6</span> == <span class="hljs-number">0</span>:<br>                    <span class="hljs-built_in">print</span>(num)<br>                <span class="hljs-keyword">else</span>:<br>                    <span class="hljs-built_in">print</span>(num, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>                cnt += <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="7-17-爬动的蠕虫（15分）"><a href="#7-17-爬动的蠕虫（15分）" class="headerlink" title="7-17 爬动的蠕虫（15分）"></a>7-17 爬动的蠕虫（15分）</h2><p>一条蠕虫长1寸，在一口深为N寸的井的底部。已知蠕虫每1分钟可以向上爬U寸，但必须休息1分钟才能接着往上爬。在休息的过程中，蠕虫又下滑了D寸。就这样，上爬和下滑重复进行。请问，蠕虫需要多长时间才能爬出井？</p>
+<h2 id="7-17-爬动的蠕虫（15分）">7-17 爬动的蠕虫（15分）</h2>
+<p>一条蠕虫长1寸，在一口深为N寸的井的底部。已知蠕虫每1分钟可以向上爬U寸，但必须休息1分钟才能接着往上爬。在休息的过程中，蠕虫又下滑了D寸。就这样，上爬和下滑重复进行。请问，蠕虫需要多长时间才能爬出井？</p>
 <p>这里要求不足1分钟按1分钟计，并且假定只要在某次上爬过程中蠕虫的头部到达了井的顶部，那么蠕虫就完成任务了。初始时，蠕虫是趴在井底的（即高度为0）。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中顺序给出3个正整数N、U、D，其中D&lt;U，N不超过100。</p>
@@ -669,24 +688,28 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python">n, u, d = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>height, time = <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span> height &lt; n:<br>    time += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">if</span> time % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:<br>        height -= d<br>    <span class="hljs-keyword">else</span>:<br>        height += u<br><span class="hljs-built_in">print</span>(time)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-18-二分法求多项式单根（20分）"><a href="#7-18-二分法求多项式单根（20分）" class="headerlink" title="7-18 二分法求多项式单根（20分）"></a>7-18 二分法求多项式单根（20分）</h2><p>二分法求函数根的原理为：如果连续函数f(x)在区间[a,b]的两个端点取值异号，即f(a)f(b)&lt;0，则它在这个区间内至少存在1个根r，即f(r)&#x3D;0。</p>
+<h2 id="7-18-二分法求多项式单根（20分）">7-18 二分法求多项式单根（20分）</h2>
+<p>二分法求函数根的原理为：如果连续函数f(x)在区间[a,b]的两个端点取值异号，即f(a)f(b)&lt;0，则它在这个区间内至少存在1个根r，即f®=0。</p>
 <p>二分法的步骤为：</p>
 <ul>
-<li>检查区间长度，如果小于给定阈值，则停止，输出区间中点(a+b)&#x2F;2；否则</li>
-<li>如果f(a)f(b)&lt;0，则计算中点的值f((a+b)&#x2F;2)；</li>
-<li>如果f((a+b)&#x2F;2)正好为0，则(a+b)&#x2F;2就是要求的根；否则</li>
-<li>如果f((a+b)&#x2F;2)与f(a)同号，则说明根在区间[(a+b)&#x2F;2,b]，令a&#x3D;(a+b)&#x2F;2，重复循环；</li>
-<li>如果f((a+b)&#x2F;2)与f(b)同号，则说明根在区间[a,(a+b)&#x2F;2]，令b&#x3D;(a+b)&#x2F;2，重复循环。</li>
+<li>检查区间长度，如果小于给定阈值，则停止，输出区间中点(a+b)/2；否则</li>
+<li>如果f(a)f(b)&lt;0，则计算中点的值f((a+b)/2)；</li>
+<li>如果f((a+b)/2)正好为0，则(a+b)/2就是要求的根；否则</li>
+<li>如果f((a+b)/2)与f(a)同号，则说明根在区间[(a+b)/2,b]，令a=(a+b)/2，重复循环；</li>
+<li>如果f((a+b)/2)与f(b)同号，则说明根在区间[a,(a+b)/2]，令b=(a+b)/2，重复循环。</li>
 </ul>
-<p>本题目要求编写程序，计算给定3阶多项式<br>$$<br>f(x)&#x3D;a_3x^3+a_2x^2+a_1x+a_0<br>$$<br>​在给定区间[a,b]内的根。</p>
+<p>本题目要求编写程序，计算给定3阶多项式</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>a</mi><mn>3</mn></msub><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mi>x</mi><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">f(x)=a_3x^3+a_2x^2+a_1x+a_0
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0141em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0141em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>​在给定区间[a,b]内的根。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在第1行中顺序给出多项式的4个系数a3​、a2​、a1​、a0​，在第2行中顺序给出区间端点a和b。题目保证多项式在给定区间内存在唯一单根。</p>
 <p><strong>输出格式：</strong></p>
 <p>在一行中输出该多项式在该区间内的根，精确到小数点后2位。</p>
 <p><strong>输入样例：</strong></p>
 <blockquote>
-<p>3 -1 -3 1<br>-0.5 0.5</p>
+<p>3 -1 -3 1<br>
+-0.5 0.5</p>
 </blockquote>
 <p><strong>输出样例：</strong></p>
 <blockquote>
@@ -694,8 +717,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs python">a3, a2, a1, a0 = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">float</span>, <span class="hljs-built_in">input</span>().split())<br>a, b = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">float</span>, <span class="hljs-built_in">input</span>().split())<br>    <br><span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">x</span>):<br>    <span class="hljs-keyword">return</span> a3*x**<span class="hljs-number">3</span> + a2*x**<span class="hljs-number">2</span> + a1*x + a0<br>    <br><span class="hljs-keyword">def</span> <span class="hljs-title function_">root</span>(<span class="hljs-params">a, b</span>):<br>    <span class="hljs-keyword">if</span> b - a &lt; <span class="hljs-number">0.01</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;(a+b)/<span class="hljs-number">2</span>:<span class="hljs-number">.2</span>f&#125;</span>&quot;</span>)<br>    <span class="hljs-keyword">elif</span> f(a) * f(b) &lt; <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">if</span> f((a+b)/<span class="hljs-number">2</span>) == <span class="hljs-number">0</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;(a+b)/<span class="hljs-number">2</span>:<span class="hljs-number">.2</span>f&#125;</span>&quot;</span>)<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-keyword">if</span> f((a+b)/<span class="hljs-number">2</span>) * f(a) &gt; <span class="hljs-number">0</span>:<br>                a = (a+b) / <span class="hljs-number">2</span><br>                root(a, b)<br>            <span class="hljs-keyword">elif</span> f((a+b)/<span class="hljs-number">2</span>) * f(b) &gt; <span class="hljs-number">0</span>:<br>                b = (a+b) / <span class="hljs-number">2</span><br>                root(a, b)<br>    <span class="hljs-keyword">elif</span> f(a) == <span class="hljs-number">0</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;a:<span class="hljs-number">.2</span>f&#125;</span>&quot;</span>)<br>    <span class="hljs-keyword">elif</span> f(b) == <span class="hljs-number">0</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;b:<span class="hljs-number">.2</span>f&#125;</span>&quot;</span>)<br>    <br>root(a, b)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-19-支票面额（15分）"><a href="#7-19-支票面额（15分）" class="headerlink" title="7-19 支票面额（15分）"></a>7-19 支票面额（15分）</h2><p>一个采购员去银行兑换一张y元f分的支票，结果出纳员错给了f元y分。采购员用去了n分之后才发觉有错，于是清点了余额尚有2y元2f分，问该支票面额是多少？</p>
+<h2 id="7-19-支票面额（15分）">7-19 支票面额（15分）</h2>
+<p>一个采购员去银行兑换一张y元f分的支票，结果出纳员错给了f元y分。采购员用去了n分之后才发觉有错，于是清点了余额尚有2y元2f分，问该支票面额是多少？</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出小于100的正整数n。</p>
 <p><strong>输出格式：</strong></p>
@@ -718,10 +741,18 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>cnt = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">100</span>):<br>    <span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">100</span>):<br>        <span class="hljs-keyword">if</span> n == <span class="hljs-number">98</span>*f - <span class="hljs-number">199</span>*y:<br>            cnt += <span class="hljs-number">1</span><br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;y&#125;</span>.<span class="hljs-subst">&#123;f&#125;</span>&quot;</span>)<br>            <span class="hljs-keyword">break</span><br><span class="hljs-keyword">if</span> cnt == <span class="hljs-number">0</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;No Solution&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-20-打印九九口诀表（15分）"><a href="#7-20-打印九九口诀表（15分）" class="headerlink" title="7-20 打印九九口诀表（15分）"></a>7-20 打印九九口诀表（15分）</h2><p>下面是一个完整的下三角九九口诀表：</p>
+<h2 id="7-20-打印九九口诀表（15分）">7-20 打印九九口诀表（15分）</h2>
+<p>下面是一个完整的下三角九九口诀表：</p>
 <blockquote>
-<p> 1*1&#x3D;1<br> 1*2&#x3D;2 2*2&#x3D;4<br> 1*3&#x3D;3 2*3&#x3D;6 3*3&#x3D;9<br> 1*4&#x3D;4 2*4&#x3D;8 3*4&#x3D;12 4*4&#x3D;16<br> 1*5&#x3D;5 2*5&#x3D;10 3*5&#x3D;15 4*5&#x3D;20 5*5&#x3D;25<br> 1*6&#x3D;6 2*6&#x3D;12 3*6&#x3D;18 4*6&#x3D;24 5*6&#x3D;30 6*6&#x3D;36<br> 1*7&#x3D;7 2*7&#x3D;14 3*7&#x3D;21 4*7&#x3D;28 5*7&#x3D;35 6*7&#x3D;42 7*7&#x3D;49<br> 1*8&#x3D;8 2*8&#x3D;16 3*8&#x3D;24 4*8&#x3D;32 5*8&#x3D;40 6*8&#x3D;48 7*8&#x3D;56 8*8&#x3D;64<br> 1*9&#x3D;9 2*9&#x3D;18 3*9&#x3D;27 4*9&#x3D;36 5*9&#x3D;45 6*9&#x3D;54 7*9&#x3D;63 8*9&#x3D;72 9*9&#x3D;81</p>
+<p>1*1=1<br>
+1*2=2 2*2=4<br>
+1*3=3 2*3=6 3*3=9<br>
+1*4=4 2*4=8 3*4=12 4*4=16<br>
+1*5=5 2*5=10 3*5=15 4*5=20 5*5=25<br>
+1*6=6 2*6=12 3*6=18 4*6=24 5*6=30 6*6=36<br>
+1*7=7 2*7=14 3*7=21 4*7=28 5*7=35 6*7=42 7*7=49<br>
+1*8=8 2*8=16 3*8=24 4*8=32 5*8=40 6*8=48 7*8=56 8*8=64<br>
+1*9=9 2*9=18 3*9=27 4*9=36 5*9=45 6*9=54 7*9=63 8*9=72 9*9=81</p>
 </blockquote>
 <p>本题要求对任意给定的一位正整数<code>N</code>，输出从<code>1*1</code>到<code>N*N</code>的部分口诀表。</p>
 <p><strong>输入格式：</strong></p>
@@ -734,24 +765,28 @@
 </blockquote>
 <p><strong>输出样例：</strong></p>
 <blockquote>
-<p> 1*1&#x3D;1<br> 1*2&#x3D;2 2*2&#x3D;4<br> 1*3&#x3D;3 2*3&#x3D;6 3*3&#x3D;9<br> 1*4&#x3D;4 2*4&#x3D;8 3*4&#x3D;12 4*4&#x3D;16</p>
+<p>1*1=1<br>
+1*2=2 2*2=4<br>
+1*3=3 2*3=6 3*3=9<br>
+1*4=4 2*4=8 3*4=12 4*4=16</p>
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, i+<span class="hljs-number">1</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;j&#125;</span>*<span class="hljs-subst">&#123;i&#125;</span>=<span class="hljs-subst">&#123;j*i:&lt;4d&#125;</span>&quot;</span>, end=<span class="hljs-string">&#x27;&#x27;</span>)<br>    <span class="hljs-built_in">print</span>()<br></code></pre></td></tr></table></figure>
-
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>7-21 求特殊方程的正整数解（15分）</p>
-<p>本题要求对任意给定的正整数N，求方程$X^2+Y^2&#x3D;N$的全部正整数解。</p>
+<h2 id=""></h2>
+<p>7-21 求特殊方程的正整数解（15分）</p>
+<p>本题要求对任意给定的正整数N，求方程<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>X</mi><mn>2</mn></msup><mo>+</mo><msup><mi>Y</mi><mn>2</mn></msup><mo>=</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">X^2+Y^2=N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>的全部正整数解。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出正整数N（≤10000）。</p>
 <p><strong>输出格式：</strong></p>
-<p>输出方程$X^2+Y^2&#x3D;N$的全部正整数解，其中X≤Y。每组解占1行，两数字间以1空格分隔，按X的递增顺序输出。如果没有解，则输出<code>No Solution</code>。</p>
+<p>输出方程<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>X</mi><mn>2</mn></msup><mo>+</mo><msup><mi>Y</mi><mn>2</mn></msup><mo>=</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">X^2+Y^2=N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>的全部正整数解，其中X≤Y。每组解占1行，两数字间以1空格分隔，按X的递增顺序输出。如果没有解，则输出<code>No Solution</code>。</p>
 <p><strong>输入样例1：</strong></p>
 <blockquote>
 <p>884</p>
 </blockquote>
 <p><strong>输出样例1：</strong></p>
 <blockquote>
-<p>10 28<br> 20 22</p>
+<p>10 28<br>
+20 22</p>
 </blockquote>
 <p><strong>输入样例2：</strong></p>
 <blockquote>
@@ -763,8 +798,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>cnt = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">100</span>):<br>    <span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">100</span>):<br>        <span class="hljs-keyword">if</span> x**<span class="hljs-number">2</span> + y**<span class="hljs-number">2</span> == n <span class="hljs-keyword">and</span> x &lt;= y:<br>            cnt += <span class="hljs-number">1</span><br>            <span class="hljs-built_in">print</span>(x, y)<br><span class="hljs-keyword">if</span> cnt == <span class="hljs-number">0</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;No Solution&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-22-龟兔赛跑（20分）"><a href="#7-22-龟兔赛跑（20分）" class="headerlink" title="7-22 龟兔赛跑（20分）"></a><strong>7-22 龟兔赛跑（20分）</strong></h2><p>乌龟与兔子进行赛跑，跑场是一个矩型跑道，跑道边可以随地进行休息。乌龟每分钟可以前进3米，兔子每分钟前进9米；兔子嫌乌龟跑得慢，觉得肯定能跑赢乌龟，于是，每跑10分钟回头看一下乌龟，若发现自己超过乌龟，就在路边休息，每次休息30分钟，否则继续跑10分钟；而乌龟非常努力，一直跑，不休息。假定乌龟与兔子在同一起点同一时刻开始起跑，请问T分钟后乌龟和兔子谁跑得快？</p>
+<h2 id="7-22-龟兔赛跑（20分）"><strong>7-22 龟兔赛跑（20分）</strong></h2>
+<p>乌龟与兔子进行赛跑，跑场是一个矩型跑道，跑道边可以随地进行休息。乌龟每分钟可以前进3米，兔子每分钟前进9米；兔子嫌乌龟跑得慢，觉得肯定能跑赢乌龟，于是，每跑10分钟回头看一下乌龟，若发现自己超过乌龟，就在路边休息，每次休息30分钟，否则继续跑10分钟；而乌龟非常努力，一直跑，不休息。假定乌龟与兔子在同一起点同一时刻开始起跑，请问T分钟后乌龟和兔子谁跑得快？</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出比赛时间T（分钟）。</p>
 <p><strong>输出格式：</strong></p>
@@ -779,9 +814,10 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python">T = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>S_a, S_b, t = <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(T):<br>    <span class="hljs-keyword">if</span> i % <span class="hljs-number">10</span> == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> S_b &gt; S_a <span class="hljs-keyword">and</span> t == <span class="hljs-number">0</span>:<br>        t = <span class="hljs-number">30</span><br>    S_a += <span class="hljs-number">3</span><br>    <span class="hljs-keyword">if</span> t == <span class="hljs-number">0</span>:<br>        S_b += <span class="hljs-number">9</span><br>    <span class="hljs-keyword">if</span> t != <span class="hljs-number">0</span>:<br>        t -= <span class="hljs-number">1</span><br><span class="hljs-keyword">if</span> S_a &gt; S_b:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;@_@ <span class="hljs-subst">&#123;S_a&#125;</span>&quot;</span>)<br><span class="hljs-keyword">elif</span> S_b &gt; S_a:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;^_^ <span class="hljs-subst">&#123;S_b&#125;</span>&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;-_- <span class="hljs-subst">&#123;S_a&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><p>7-23 币值转换（20分）</p>
-<p>输入一个整数（位数不超过9位）代表一个人民币值（单位为元），请转换成财务要求的大写中文格式。如23108元，转换后变成“贰万叁仟壹百零捌”元。为了简化输出，用小写英文字母a-<br>j顺序代表大写数字0-9，用S、B、Q、W、Y分别代表拾、百、仟、万、亿。于是23108元应被转换输出为“cWdQbBai”元。</p>
+<h2 id="-2"></h2>
+<p>7-23 币值转换（20分）</p>
+<p>输入一个整数（位数不超过9位）代表一个人民币值（单位为元），请转换成财务要求的大写中文格式。如23108元，转换后变成“贰万叁仟壹百零捌”元。为了简化输出，用小写英文字母a-<br>
+j顺序代表大写数字0-9，用S、B、Q、W、Y分别代表拾、百、仟、万、亿。于是23108元应被转换输出为“cWdQbBai”元。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出一个不超过9位的非负整数。</p>
 <p><strong>输出格式：</strong></p>
@@ -804,37 +840,48 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">input</span>()<br><span class="hljs-keyword">if</span> n == <span class="hljs-string">&#x27;0&#x27;</span>:<br>       <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;a&#x27;</span>)<br><span class="hljs-keyword">else</span>:<br>    unit = [<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;S&#x27;</span>, <span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-string">&#x27;Q&#x27;</span>, <span class="hljs-string">&#x27;W&#x27;</span>, <span class="hljs-string">&#x27;S&#x27;</span>, <span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-string">&#x27;Q&#x27;</span>, <span class="hljs-string">&#x27;Y&#x27;</span>]<br>    money = [<span class="hljs-built_in">int</span>(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> n[::-<span class="hljs-number">1</span>]]<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(n)-<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">if</span> money[i]:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-built_in">chr</span>(money[i]+<span class="hljs-number">97</span>) + unit[i],end=<span class="hljs-string">&#x27;&#x27;</span>)<br>        <span class="hljs-keyword">elif</span> i == <span class="hljs-number">4</span>:<br>            <span class="hljs-keyword">if</span> money[<span class="hljs-number">5</span>] <span class="hljs-keyword">or</span> money[<span class="hljs-number">6</span>] <span class="hljs-keyword">or</span> money[<span class="hljs-number">7</span>]:<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;W&quot;</span>,end=<span class="hljs-string">&#x27;&#x27;</span>)<br>        <span class="hljs-keyword">elif</span> i-<span class="hljs-number">1</span> &gt;= <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> money[i-<span class="hljs-number">1</span>]:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;a&quot;</span>,end=<span class="hljs-string">&#x27;&#x27;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-24-约分最简分式（15分）"><a href="#7-24-约分最简分式（15分）" class="headerlink" title="7-24 约分最简分式（15分）"></a>7-24 约分最简分式（15分）</h2><p>分数可以表示为<code>分子/分母</code>的形式。编写一个程序，要求用户输入一个分数，然后将其约分为最简分式。最简分式是指分子和分母不具有可以约分的成分了。如6&#x2F;12可以被约分为1&#x2F;2。当分子大于分母时，不需要表达为整数又分数的形式，即11&#x2F;8还是11&#x2F;8；而当分子分母相等时，仍然表达为1&#x2F;1的分数形式。</p>
+<h2 id="7-24-约分最简分式（15分）">7-24 约分最简分式（15分）</h2>
+<p>分数可以表示为<code>分子/分母</code>的形式。编写一个程序，要求用户输入一个分数，然后将其约分为最简分式。最简分式是指分子和分母不具有可以约分的成分了。如6/12可以被约分为1/2。当分子大于分母时，不需要表达为整数又分数的形式，即11/8还是11/8；而当分子分母相等时，仍然表达为1/1的分数形式。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出一个分数，分子和分母中间以斜杠<code>/</code>分隔，如：<code>12/34</code>表示34分之12。分子和分母都是正整数（不包含0，如果不清楚正整数的定义的话）。</p>
 <p><strong>提示：</strong></p>
 <ul>
 <li>对于C语言，在<code>scanf</code>的格式字符串中加入<code>/</code>，让<code>scanf</code>来处理这个斜杠。</li>
-<li>对于Python语言，用<code>a,b=map(int, input().split(&#39;/&#39;))</code>这样的代码来处理这个斜杠。</li>
+<li>对于Python语言，用<code>a,b=map(int, input().split('/'))</code>这样的代码来处理这个斜杠。</li>
 </ul>
 <p><strong>输出格式：</strong></p>
-<p>在一行中输出这个分数对应的最简分式，格式与输入的相同，即采用<code>分子/分母</code>的形式表示分数。如<br><code>5/6</code>表示6分之5。</p>
+<p>在一行中输出这个分数对应的最简分式，格式与输入的相同，即采用<code>分子/分母</code>的形式表示分数。如<br>
+<code>5/6</code>表示6分之5。</p>
 <p><strong>输入样例：</strong></p>
 <blockquote>
-<p>66&#x2F;120</p>
+<p>66/120</p>
 </blockquote>
 <p><strong>输出样例：</strong></p>
 <blockquote>
-<p>11&#x2F;20</p>
+<p>11/20</p>
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> math<br>    <br>a, b = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split(<span class="hljs-string">&#x27;/&#x27;</span>))<br>n = math.gcd(a, b)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;<span class="hljs-built_in">int</span>(a/n)&#125;</span>/<span class="hljs-subst">&#123;<span class="hljs-built_in">int</span>(b/n)&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-25-念数字（15分）"><a href="#7-25-念数字（15分）" class="headerlink" title="7-25 念数字（15分）"></a>7-25 念数字（15分）</h2><p>输入一个整数，输出每个数字对应的拼音。当整数为负数时，先输出<code>fu</code>字。十个数字对应的拼音如下：</p>
+<h2 id="7-25-念数字（15分）">7-25 念数字（15分）</h2>
+<p>输入一个整数，输出每个数字对应的拼音。当整数为负数时，先输出<code>fu</code>字。十个数字对应的拼音如下：</p>
 <blockquote>
-<p> 0: ling<br> 1: yi<br> 2: er<br> 3: san<br> 4: si<br> 5: wu<br> 6: liu<br> 7: qi<br> 8: ba<br> 9: jiu</p>
+<p>0: ling<br>
+1: yi<br>
+2: er<br>
+3: san<br>
+4: si<br>
+5: wu<br>
+6: liu<br>
+7: qi<br>
+8: ba<br>
+9: jiu</p>
 </blockquote>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出一个整数，如：<code>1234</code>。</p>
 <p><strong>提示：整数包括负数、零和正数。</strong></p>
 <p><strong>输出格式：</strong></p>
-<p>在一行中输出这个整数对应的拼音，每个数字的拼音之间用空格分开，行末没有最后的空格。如<br><code>yi er san si</code>。</p>
+<p>在一行中输出这个整数对应的拼音，每个数字的拼音之间用空格分开，行末没有最后的空格。如<br>
+<code>yi er san si</code>。</p>
 <p><strong>输入样例：</strong></p>
 <blockquote>
 <p>-600</p>
@@ -845,8 +892,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">dict1 = &#123;<span class="hljs-string">&#x27;-&#x27;</span>:<span class="hljs-string">&#x27;fu&#x27;</span>,<span class="hljs-string">&#x27;0&#x27;</span>:<span class="hljs-string">&#x27;ling&#x27;</span>,<span class="hljs-string">&#x27;1&#x27;</span>:<span class="hljs-string">&#x27;yi&#x27;</span>,<span class="hljs-string">&#x27;2&#x27;</span>:<span class="hljs-string">&#x27;er&#x27;</span>,<span class="hljs-string">&#x27;3&#x27;</span>:<span class="hljs-string">&#x27;san&#x27;</span>,<span class="hljs-string">&#x27;4&#x27;</span>:<span class="hljs-string">&#x27;si&#x27;</span>,<br>         <span class="hljs-string">&#x27;5&#x27;</span>:<span class="hljs-string">&#x27;wu&#x27;</span>,<span class="hljs-string">&#x27;6&#x27;</span>:<span class="hljs-string">&#x27;liu&#x27;</span>,<span class="hljs-string">&#x27;7&#x27;</span>:<span class="hljs-string">&#x27;qi&#x27;</span>,<span class="hljs-string">&#x27;8&#x27;</span>:<span class="hljs-string">&#x27;ba&#x27;</span>,<span class="hljs-string">&#x27;9&#x27;</span>:<span class="hljs-string">&#x27;jiu&#x27;</span>&#125;<br>s = <span class="hljs-built_in">input</span>()<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(s)-<span class="hljs-number">1</span>):<br>    <span class="hljs-built_in">print</span>(dict1[s[i]],end=<span class="hljs-string">&quot; &quot;</span>)<br><span class="hljs-built_in">print</span>(dict1[s[-<span class="hljs-number">1</span>]])<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-26-单词长度（15分）"><a href="#7-26-单词长度（15分）" class="headerlink" title="7-26 单词长度（15分）"></a>7-26 单词长度（15分）</h2><p>你的程序要读入一行文本，其中以空格分隔为若干个单词，以<code>.</code>结束。你要输出每个单词的长度。这里的单词与语言无关，可以包括各种符号，比如<code>it&#39;s</code>算一个单词，长度为4。注意，行中可能出现连续的空格；最后的<code>.</code>不计算在内。</p>
+<h2 id="7-26-单词长度（15分）">7-26 单词长度（15分）</h2>
+<p>你的程序要读入一行文本，其中以空格分隔为若干个单词，以<code>.</code>结束。你要输出每个单词的长度。这里的单词与语言无关，可以包括各种符号，比如<code>it's</code>算一个单词，长度为4。注意，行中可能出现连续的空格；最后的<code>.</code>不计算在内。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出一行文本，以<code>.</code>结束</p>
 <p><strong>提示：</strong> 用<code>scanf(&quot;%c&quot;,...);</code>来读入一个字符，直到读到<code>.</code>为止。</p>
@@ -862,8 +909,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">s = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">input</span>().strip(<span class="hljs-string">&#x27;.&#x27;</span>).split())<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(s)):<br>    <span class="hljs-keyword">if</span> i != <span class="hljs-built_in">len</span>(s) - <span class="hljs-number">1</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(s[i]), end=<span class="hljs-string">&#x27; &#x27;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(s[i]))<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-27-冒泡法排序（20分）"><a href="#7-27-冒泡法排序（20分）" class="headerlink" title="7-27 冒泡法排序（20分）"></a>7-27 冒泡法排序（20分）</h2><p>将N个整数按从小到大排序的冒泡排序法是这样工作的：从头到尾比较相邻两个元素，如果前面的元素大于其紧随的后面元素，则交换它们。通过一遍扫描，则最后一个元素必定是最大的元素。然后用同样的方法对前N−1个元素进行第二遍扫描。依此类推，最后只需处理两个元素，就完成了对N个数的排序。</p>
+<h2 id="7-27-冒泡法排序（20分）">7-27 冒泡法排序（20分）</h2>
+<p>将N个整数按从小到大排序的冒泡排序法是这样工作的：从头到尾比较相邻两个元素，如果前面的元素大于其紧随的后面元素，则交换它们。通过一遍扫描，则最后一个元素必定是最大的元素。然后用同样的方法对前N−1个元素进行第二遍扫描。依此类推，最后只需处理两个元素，就完成了对N个数的排序。</p>
 <p>本题要求对任意给定的K（&lt;N），输出扫描完第K遍后的中间结果数列。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在第1行中给出N和K（1≤K&lt;N≤100），在第2行中给出N个待排序的整数，数字间以空格分隔。</p>
@@ -871,7 +918,8 @@
 <p>在一行中输出冒泡排序法扫描完第K遍后的中间结果数列，数字间以空格分隔，但末尾不得有多余空格。</p>
 <p><strong>输入样例：</strong></p>
 <blockquote>
-<p>6 2<br>2 3 5 1 6 4</p>
+<p>6 2<br>
+2 3 5 1 6 4</p>
 </blockquote>
 <p><strong>输出样例：</strong></p>
 <blockquote>
@@ -879,8 +927,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">n, k = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>nums = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">eval</span>, <span class="hljs-built_in">input</span>().split()))<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(k):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n-<span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">if</span> nums[j] &gt; nums[j+<span class="hljs-number">1</span>]:<br>            nums[j], nums[j+<span class="hljs-number">1</span>] = nums[j+<span class="hljs-number">1</span>], nums[j]<br><span class="hljs-built_in">print</span>(*nums)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-28-猴子选大王（20分）"><a href="#7-28-猴子选大王（20分）" class="headerlink" title="7-28 猴子选大王（20分）"></a>7-28 猴子选大王（20分）</h2><p>一群猴子要选新猴王。新猴王的选择方法是：让N只候选猴子围成一圈，从某位置起顺序编号为1~N号。从第1号开始报数，每轮从1报到3，凡报到3的猴子即退出圈子，接着又从紧邻的下一只猴子开始同样的报数。如此不断循环，最后剩下的一只猴子就选为猴王。请问是原来第几号猴子当选猴王？</p>
+<h2 id="7-28-猴子选大王（20分）">7-28 猴子选大王（20分）</h2>
+<p>一群猴子要选新猴王。新猴王的选择方法是：让N只候选猴子围成一圈，从某位置起顺序编号为1~N号。从第1号开始报数，每轮从1报到3，凡报到3的猴子即退出圈子，接着又从紧邻的下一只猴子开始同样的报数。如此不断循环，最后剩下的一只猴子就选为猴王。请问是原来第几号猴子当选猴王？</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给一个正整数N（≤1000）。</p>
 <p><strong>输出格式：</strong></p>
@@ -895,15 +943,16 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">king</span>(<span class="hljs-params">n</span>):<br>    monkeys = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>))<br>    cnt = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">while</span> <span class="hljs-built_in">len</span>(monkeys) &gt; <span class="hljs-number">1</span>:<br>        cnt = (cnt + <span class="hljs-number">2</span>) % <span class="hljs-built_in">len</span>(monkeys)<br>        monkeys.pop(cnt)<br>    <span class="hljs-keyword">return</span> monkeys[<span class="hljs-number">0</span>]<br>    <br>n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><span class="hljs-built_in">print</span>(king(n))<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-29-删除字符串中的子串（20分）"><a href="#7-29-删除字符串中的子串（20分）" class="headerlink" title="7-29 删除字符串中的子串（20分）"></a>7-29 删除字符串中的子串（20分）</h2><p>输入2个字符串S1和S2，要求删除字符串S1中出现的所有子串S2，即结果字符串中不能包含S2。</p>
+<h2 id="7-29-删除字符串中的子串（20分）">7-29 删除字符串中的子串（20分）</h2>
+<p>输入2个字符串S1和S2，要求删除字符串S1中出现的所有子串S2，即结果字符串中不能包含S2。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在2行中分别给出不超过80个字符长度的、以回车结束的2个非空字符串，对应S1和S2。</p>
 <p><strong>输出格式：</strong></p>
 <p>在一行中输出删除字符串S1中出现的所有子串S2后的结果字符串。</p>
 <p><strong>输入样例：</strong></p>
 <blockquote>
-<p>Tomcat is a male ccatat<br> cat</p>
+<p>Tomcat is a male ccatat<br>
+cat</p>
 </blockquote>
 <p><strong>输出样例：</strong></p>
 <blockquote>
@@ -911,32 +960,44 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">s1 = <span class="hljs-built_in">input</span>()<br>s2 = <span class="hljs-built_in">input</span>()<br><span class="hljs-keyword">while</span> s2 <span class="hljs-keyword">in</span> s1:<br>    s1 = s1.replace(s2, <span class="hljs-string">&#x27;&#x27;</span>)<br><span class="hljs-built_in">print</span>(s1)<br></code></pre></td></tr></table></figure>
-
 <hr>
-<h2 id="7-30-字符串的冒泡排序（20分）"><a href="#7-30-字符串的冒泡排序（20分）" class="headerlink" title="7-30 字符串的冒泡排序（20分）"></a><strong>7-30 字符串的冒泡排序（20分）</strong></h2><p>我们已经知道了将N个整数按从小到大排序的冒泡排序法。本题要求将此方法用于字符串序列，并对任意给定的K（&lt;N），输出扫描完第K遍后的中间结果序列。</p>
+<h2 id="7-30-字符串的冒泡排序（20分）"><strong>7-30 字符串的冒泡排序（20分）</strong></h2>
+<p>我们已经知道了将N个整数按从小到大排序的冒泡排序法。本题要求将此方法用于字符串序列，并对任意给定的K（&lt;N），输出扫描完第K遍后的中间结果序列。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在第1行中给出N和K（1≤K&lt;N≤100），此后N行，每行包含一个长度不超过10的、仅由小写英文字母组成的非空字符串。</p>
 <p><strong>输出格式：</strong></p>
 <p>输出冒泡排序法扫描完第K遍后的中间结果序列，每行包含一个字符串。</p>
 <p><strong>输入样例：</strong></p>
 <blockquote>
-<p> 6 2<br> best<br> cat<br> east<br> a<br> free<br> day</p>
+<p>6 2<br>
+best<br>
+cat<br>
+east<br>
+a<br>
+free<br>
+day</p>
 </blockquote>
 <p><strong>输出样例：</strong></p>
 <blockquote>
-<p> best<br> a<br> cat<br> day<br> east<br> free</p>
+<p>best<br>
+a<br>
+cat<br>
+day<br>
+east<br>
+free</p>
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">n, k = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>string = [<span class="hljs-built_in">input</span>() <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n)]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(k):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n-<span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">if</span> string[j] &gt; string[j+<span class="hljs-number">1</span>]:<br>            string[j], string[j+<span class="hljs-number">1</span>] = string[j+<span class="hljs-number">1</span>], string[j]<br><span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> string:<br>    <span class="hljs-built_in">print</span>(s)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-31-字符串循环左移（20分）"><a href="#7-31-字符串循环左移（20分）" class="headerlink" title="7-31 字符串循环左移（20分）"></a>7-31 字符串循环左移（20分）</h2><p>输入一个字符串和一个非负整数N，要求将字符串循环左移N次。</p>
+<h2 id="7-31-字符串循环左移（20分）">7-31 字符串循环左移（20分）</h2>
+<p>输入一个字符串和一个非负整数N，要求将字符串循环左移N次。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在第1行中给出一个不超过100个字符长度的、以回车结束的非空字符串；第2行给出非负整数N。</p>
 <p><strong>输出格式：</strong></p>
 <p>在一行中输出循环左移N次后的字符串。</p>
 <p><strong>输入样例：</strong></p>
 <blockquote>
-<p>Hello World!<br> 2</p>
+<p>Hello World!<br>
+2</p>
 </blockquote>
 <p><strong>输出样例：</strong></p>
 <blockquote>
@@ -944,8 +1005,8 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">s = <span class="hljs-built_in">input</span>()<br>n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>i = n % <span class="hljs-built_in">len</span>(s)<br><span class="hljs-built_in">print</span>(s[i:]+s[:i])<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-32-说反话-加强版（20分）"><a href="#7-32-说反话-加强版（20分）" class="headerlink" title="7-32 说反话-加强版（20分）"></a>7-32 说反话-加强版（20分）</h2><p>给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。</p>
+<h2 id="7-32-说反话-加强版（20分）">7-32 说反话-加强版（20分）</h2>
+<p>给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。</p>
 <p><strong>输入格式：</strong></p>
 <p>测试输入包含一个测试用例，在一行内给出总长度不超过500000的字符串。字符串由若干单词和若干空格组成，其中单词是由英文字母（大小写有区分）组成的字符串，单词之间用若干个空格分开。</p>
 <p><strong>输出格式：</strong></p>
@@ -960,23 +1021,23 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">s = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">input</span>().split())<br><span class="hljs-built_in">print</span>(*s[::-<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-33-有理数加法（15分）"><a href="#7-33-有理数加法（15分）" class="headerlink" title="7-33 有理数加法（15分）"></a>7-33 有理数加法（15分）</h2><p>本题要求编写程序，计算两个有理数的和。</p>
+<h2 id="7-33-有理数加法（15分）">7-33 有理数加法（15分）</h2>
+<p>本题要求编写程序，计算两个有理数的和。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中按照<code>a1/b1 a2/b2</code>的格式给出两个分数形式的有理数，其中分子和分母全是整形范围内的正整数。</p>
 <p><strong>输出格式：</strong></p>
 <p>在一行中按照<code>a/b</code>的格式输出两个有理数的和。注意必须是该有理数的最简分数形式，若分母为1，则只输出分子。</p>
 <p><strong>输入样例1：</strong></p>
 <blockquote>
-<p>1&#x2F;3 1&#x2F;6</p>
+<p>1/3 1/6</p>
 </blockquote>
 <p><strong>输出样例1：</strong></p>
 <blockquote>
-<p>1&#x2F;2</p>
+<p>1/2</p>
 </blockquote>
 <p><strong>输入样例2：</strong></p>
 <blockquote>
-<p>4&#x2F;3 2&#x2F;3</p>
+<p>4/3 2/3</p>
 </blockquote>
 <p><strong>输出样例2：</strong></p>
 <blockquote>
@@ -984,8 +1045,9 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> math <span class="hljs-keyword">import</span> gcd, lcm<br><br>num1, num2 = <span class="hljs-built_in">input</span>().split()<br>a1, b1 = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, num1.split(<span class="hljs-string">&#x27;/&#x27;</span>))<br>a2, b2 = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, num2.split(<span class="hljs-string">&#x27;/&#x27;</span>))<br>b = lcm(b1, b2)<br>a = <span class="hljs-built_in">int</span>(b/b1*a1 + b/b2*a2)<br>gcd_ab = gcd(a, b)<br><span class="hljs-keyword">if</span> gcd_ab == b:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">int</span>(a/b))<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;<span class="hljs-built_in">int</span>(a / gcd_ab)&#125;</span>/<span class="hljs-subst">&#123;<span class="hljs-built_in">int</span>(b / gcd_ab)&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-34-通讯录的录入与显示（10分）"><a href="#7-34-通讯录的录入与显示（10分）" class="headerlink" title="7-34 通讯录的录入与显示（10分）"></a>7-34 通讯录的录入与显示（10分）</h2><p>通讯录中的一条记录包含下述基本信息：朋友的姓名、出生日期、性别、固定电话号码、移动电话号码。<br>本题要求编写程序，录入N条记录，并且根据要求显示任意某条记录。</p>
+<h2 id="7-34-通讯录的录入与显示（10分）">7-34 通讯录的录入与显示（10分）</h2>
+<p>通讯录中的一条记录包含下述基本信息：朋友的姓名、出生日期、性别、固定电话号码、移动电话号码。<br>
+本题要求编写程序，录入N条记录，并且根据要求显示任意某条记录。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在第一行给出正整数N（≤10）；随后N行，每行按照格式<code>姓名 生日 性别 固话 手机</code>给出一条记录。其中<code>姓名</code>是不超过10个字符、不包含空格的非空字符串；生日按<code>yyyy/mm/dd</code>的格式给出年月日；性别用<code>M</code>表示“男”、<code>F</code>表示“女”；<code>固话</code>和<code>手机</code>均为不超过15位的连续数字，前面有可能出现<code>+</code>。</p>
 <p>在通讯录记录输入完成后，最后一行给出正整数K，并且随后给出K个整数，表示要查询的记录编号（从0到N−1顺序编号）。数字间以空格分隔。</p>
@@ -993,31 +1055,38 @@
 <p>对每一条要查询的记录编号，在一行中按照<code>姓名 固话 手机 性别 生日</code>的格式输出该记录。若要查询的记录不存在，则输出<code>Not Found</code>。</p>
 <p><strong>输入样例：</strong></p>
 <blockquote>
-<p> 3<br> Chris 1984&#x2F;03&#x2F;10 F +86181779452 13707010007<br> LaoLao 1967&#x2F;11&#x2F;30 F 057187951100 +8618618623333<br> QiaoLin 1980&#x2F;01&#x2F;01 M 84172333 10086<br> 2 1 7</p>
+<p>3<br>
+Chris 1984/03/10 F +86181779452 13707010007<br>
+LaoLao 1967/11/30 F 057187951100 +8618618623333<br>
+QiaoLin 1980/01/01 M 84172333 10086<br>
+2 1 7</p>
 </blockquote>
 <p><strong>输出样例：</strong></p>
 <blockquote>
-<p>LaoLao 057187951100 +8618618623333 F 1967&#x2F;11&#x2F;30<br>Not Found</p>
+<p>LaoLao 057187951100 +8618618623333 F 1967/11/30<br>
+Not Found</p>
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>message = [<span class="hljs-built_in">input</span>() <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n)]<br>k, *num = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> num:<br>    <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt;= i &lt; n:<br>        a, b, c, d, e = message[i].split()<br>        <span class="hljs-built_in">print</span>(a, d, e, c, b)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Not Found&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-35-有理数均值（20分）"><a href="#7-35-有理数均值（20分）" class="headerlink" title="7-35 有理数均值（20分）"></a>7-35 有理数均值（20分）</h2><p>本题要求编写程序，计算N个有理数的平均值。</p>
+<h2 id="7-35-有理数均值（20分）">7-35 有理数均值（20分）</h2>
+<p>本题要求编写程序，计算N个有理数的平均值。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入第一行给出正整数N（≤100）；第二行中按照<code>a1/b1 a2/b2 …</code>的格式给出N个分数形式的有理数，其中分子和分母全是整形范围内的整数；如果是负数，则负号一定出现在最前面。</p>
 <p><strong>输出格式：</strong></p>
 <p>在一行中按照<code>a/b</code>的格式输出N个有理数的平均值。注意必须是该有理数的最简分数形式，若分母为1，则只输出分子。</p>
 <p><strong>输入样例1：</strong></p>
 <blockquote>
-<p>4<br>1&#x2F;2 1&#x2F;6 3&#x2F;6 -5&#x2F;10</p>
+<p>4<br>
+1/2 1/6 3/6 -5/10</p>
 </blockquote>
 <p><strong>输出样例1：</strong></p>
 <blockquote>
-<p>1&#x2F;6</p>
+<p>1/6</p>
 </blockquote>
 <p><strong>输入样例2：</strong></p>
 <blockquote>
-<p>2<br>4&#x2F;3 2&#x2F;3</p>
+<p>2<br>
+4/3 2/3</p>
 </blockquote>
 <p><strong>输出样例2：</strong></p>
 <blockquote>
@@ -1025,10 +1094,10 @@
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> fractions <span class="hljs-keyword">import</span> Fraction<br>    <br>n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>nums = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">input</span>().split())<br>s = Fraction(<span class="hljs-string">&#x27;0&#x27;</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    num = Fraction(nums[i])<br>    s += num<br><span class="hljs-built_in">print</span>(s / n)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-36-复数四则运算（15分）"><a href="#7-36-复数四则运算（15分）" class="headerlink" title="7-36 复数四则运算（15分）"></a>7-36 复数四则运算（15分）</h2><p>本题要求编写程序，计算2个复数的和、差、积、商。</p>
+<h2 id="7-36-复数四则运算（15分）">7-36 复数四则运算（15分）</h2>
+<p>本题要求编写程序，计算2个复数的和、差、积、商。</p>
 <p><strong>输入格式：</strong></p>
-<p>输入在一行中按照<code>a1 b1 a2 b2</code>的格式给出2个复数C1&#x3D;<code>a1+b1i</code>和C2&#x3D;<code>a2+b2i</code>的实部和虚部。题目保证C2不为0。</p>
+<p>输入在一行中按照<code>a1 b1 a2 b2</code>的格式给出2个复数C1=<code>a1+b1i</code>和C2=<code>a2+b2i</code>的实部和虚部。题目保证C2不为0。</p>
 <p><strong>输出格式：</strong></p>
 <p>分别在4行中按照<code>(a1+b1i) 运算符 (a2+b2i) = 结果</code>的格式顺序输出2个复数的和、差、积、商，数字精确到小数点后1位。如果结果的实部或者虚部为0，则不输出。如果结果为0，则输出0.0。</p>
 <p><strong>输入样例1：</strong></p>
@@ -1037,7 +1106,10 @@
 </blockquote>
 <p><strong>输出样例1：</strong></p>
 <blockquote>
-<p>(2.0+3.1i) + (-2.0+5.1i) &#x3D; 8.1i<br>(2.0+3.1i) - (-2.0+5.1i) &#x3D; 4.0-2.0i<br>(2.0+3.1i) * (-2.0+5.1i) &#x3D; -19.7+3.8i<br>(2.0+3.1i) &#x2F; (-2.0+5.1i) &#x3D; 0.4-0.6i</p>
+<p>(2.0+3.1i) + (-2.0+5.1i) = 8.1i<br>
+(2.0+3.1i) - (-2.0+5.1i) = 4.0-2.0i<br>
+(2.0+3.1i) * (-2.0+5.1i) = -19.7+3.8i<br>
+(2.0+3.1i) / (-2.0+5.1i) = 0.4-0.6i</p>
 </blockquote>
 <p><strong>输入样例2：</strong></p>
 <blockquote>
@@ -1045,28 +1117,35 @@
 </blockquote>
 <p><strong>输出样例2：</strong></p>
 <blockquote>
-<p>(1.0+1.0i) + (-1.0-1.0i) &#x3D; 0.0<br>(1.0+1.0i) - (-1.0-1.0i) &#x3D; 2.0+2.0i<br>(1.0+1.0i) * (-1.0-1.0i) &#x3D; -2.0i<br>(1.0+1.0i) &#x2F; (-1.0-1.0i) &#x3D; -1.0</p>
+<p>(1.0+1.0i) + (-1.0-1.0i) = 0.0<br>
+(1.0+1.0i) - (-1.0-1.0i) = 2.0+2.0i<br>
+(1.0+1.0i) * (-1.0-1.0i) = -2.0i<br>
+(1.0+1.0i) / (-1.0-1.0i) = -1.0</p>
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs python">a1, b1, a2, b2 = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">float</span>, <span class="hljs-built_in">input</span>().split())<br>c1, c2 = <span class="hljs-built_in">complex</span>(a1, b1), <span class="hljs-built_in">complex</span>(a2, b2)<br>c1_r, c1_i = <span class="hljs-built_in">round</span>(c1.real, <span class="hljs-number">1</span>), <span class="hljs-built_in">round</span>(c1.imag, <span class="hljs-number">1</span>)<br>c2_r, c2_i = <span class="hljs-built_in">round</span>(c2.real, <span class="hljs-number">1</span>), <span class="hljs-built_in">round</span>(c2.imag, <span class="hljs-number">1</span>)<br><span class="hljs-keyword">if</span> c1_i &gt;= <span class="hljs-number">0</span>:<br>    c1_i = <span class="hljs-string">&#x27;+&#x27;</span> + <span class="hljs-built_in">str</span>(c1_i)<br><span class="hljs-keyword">if</span> c2_i &gt;= <span class="hljs-number">0</span>:<br>    c2_i = <span class="hljs-string">&#x27;+&#x27;</span> + <span class="hljs-built_in">str</span>(c2_i)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">c</span>):<br>    c1, c2 = <span class="hljs-built_in">round</span>(c.real,<span class="hljs-number">1</span>), <span class="hljs-built_in">round</span>(c.imag,<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">if</span> c1 == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> c2 == <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;0.0&quot;</span><br>    <span class="hljs-keyword">elif</span> c1 == <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;c2&#125;</span>i&quot;</span><br>    <span class="hljs-keyword">elif</span> c2 == <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;c1&#125;</span>&quot;</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">if</span> c2 &gt; <span class="hljs-number">0</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;c1&#125;</span>+<span class="hljs-subst">&#123;c2&#125;</span>i&quot;</span><br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;c1&#125;</span><span class="hljs-subst">&#123;c2&#125;</span>i&quot;</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;(<span class="hljs-subst">&#123;c1_r&#125;</span><span class="hljs-subst">&#123;c1_i&#125;</span>i) + (<span class="hljs-subst">&#123;c2_r&#125;</span><span class="hljs-subst">&#123;c2_i&#125;</span>i) = <span class="hljs-subst">&#123;f(c1+c2)&#125;</span>&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;(<span class="hljs-subst">&#123;c1_r&#125;</span><span class="hljs-subst">&#123;c1_i&#125;</span>i) - (<span class="hljs-subst">&#123;c2_r&#125;</span><span class="hljs-subst">&#123;c2_i&#125;</span>i) = <span class="hljs-subst">&#123;f(c1-c2)&#125;</span>&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;(<span class="hljs-subst">&#123;c1_r&#125;</span><span class="hljs-subst">&#123;c1_i&#125;</span>i) * (<span class="hljs-subst">&#123;c2_r&#125;</span><span class="hljs-subst">&#123;c2_i&#125;</span>i) = <span class="hljs-subst">&#123;f(c1*c2)&#125;</span>&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;(<span class="hljs-subst">&#123;c1_r&#125;</span><span class="hljs-subst">&#123;c1_i&#125;</span>i) / (<span class="hljs-subst">&#123;c2_r&#125;</span><span class="hljs-subst">&#123;c2_i&#125;</span>i) = <span class="hljs-subst">&#123;f(c1/c2)&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-37-整数分解为若干项之和（20分）"><a href="#7-37-整数分解为若干项之和（20分）" class="headerlink" title="7-37 整数分解为若干项之和（20分）"></a>7-37 整数分解为若干项之和（20分）</h2><p>将一个正整数N分解成几个正整数相加，可以有多种分解方法，例如7&#x3D;6+1，7&#x3D;5+2，7&#x3D;5+1+1，…。编程求出正整数N的所有整数分解式子。</p>
+<h2 id="7-37-整数分解为若干项之和（20分）">7-37 整数分解为若干项之和（20分）</h2>
+<p>将一个正整数N分解成几个正整数相加，可以有多种分解方法，例如7=6+1，7=5+2，7=5+1+1，…。编程求出正整数N的所有整数分解式子。</p>
 <p><strong>输入格式：</strong></p>
 <p>每个输入包含一个测试用例，即正整数N (0&lt;N≤30)。</p>
 <p><strong>输出格式：</strong></p>
-<p>按递增顺序输出N的所有整数分解式子。递增顺序是指：对于两个分解序列N1​&#x3D;{n1​,n2​,⋯}和N2​&#x3D;{m1​,m2​,⋯}，若存在i使得n1​&#x3D;m1​,⋯,ni​&#x3D;mi​，但是ni+1​&lt;mi+1​,则N1​序列必定在N2​序列之前输出。每个式子由小到大相加，式子间用分号隔开，且每输出4个式子后换行。</p>
+<p>按递增顺序输出N的所有整数分解式子。递增顺序是指：对于两个分解序列N1​={n1​,n2​,⋯}和N2​={m1​,m2​,⋯}，若存在i使得n1​=m1​,⋯,ni​=mi​，但是ni+1​&lt;mi+1​,则N1​序列必定在N2​序列之前输出。每个式子由小到大相加，式子间用分号隔开，且每输出4个式子后换行。</p>
 <p><strong>输入样例：</strong></p>
 <blockquote>
 <p>7</p>
 </blockquote>
 <p><strong>输出样例：</strong></p>
 <blockquote>
-<p> 7&#x3D;1+1+1+1+1+1+1;7&#x3D;1+1+1+1+1+2;7&#x3D;1+1+1+1+3;7&#x3D;1+1+1+2+2<br> 7&#x3D;1+1+1+4;7&#x3D;1+1+2+3;7&#x3D;1+1+5;7&#x3D;1+2+2+2<br> 7&#x3D;1+2+4;7&#x3D;1+3+3;7&#x3D;1+6;7&#x3D;2+2+3<br> 7&#x3D;2+5;7&#x3D;3+4;7&#x3D;7</p>
+<p>7=1+1+1+1+1+1+1;7=1+1+1+1+1+2;7=1+1+1+1+3;7=1+1+1+2+2<br>
+7=1+1+1+4;7=1+1+2+3;7=1+1+5;7=1+2+2+2<br>
+7=1+2+4;7=1+3+3;7=1+6;7=2+2+3<br>
+7=2+5;7=3+4;7=7</p>
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>num = [<span class="hljs-number">0</span>] * <span class="hljs-number">31</span><br>cnt = <span class="hljs-number">1</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">print_result</span>():<br>    <span class="hljs-keyword">global</span> cnt<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;n&#125;</span>=&quot;</span>, end=<span class="hljs-string">&quot;&quot;</span>)<br>    i = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">while</span> num[i] != <span class="hljs-number">0</span>:<br>        <span class="hljs-built_in">print</span>(num[i], end=<span class="hljs-string">&quot;&quot;</span>)<br>        <span class="hljs-keyword">if</span> num[i + <span class="hljs-number">1</span>] != <span class="hljs-number">0</span>:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;+&quot;</span>, end=<span class="hljs-string">&quot;&quot;</span>)<br>        i += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">if</span> cnt % <span class="hljs-number">4</span> == <span class="hljs-number">0</span>:<br>        <span class="hljs-built_in">print</span>()<br>    <span class="hljs-keyword">elif</span> num[i - <span class="hljs-number">1</span>] != n:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;;&quot;</span>, end=<span class="hljs-string">&quot;&quot;</span>)<br>    <br><span class="hljs-keyword">def</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">index, max_val, start</span>):<br>    <span class="hljs-keyword">global</span> cnt<br>    <span class="hljs-keyword">if</span> max_val == <span class="hljs-number">0</span>:<br>        print_result()<br>        cnt += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span><br>    <br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(start, max_val + <span class="hljs-number">1</span>):<br>        num[index] = i<br>        dfs(index + <span class="hljs-number">1</span>, max_val - i, i)<br>        num[index] = <span class="hljs-number">0</span><br>    <br>dfs(<span class="hljs-number">0</span>, n, <span class="hljs-number">1</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="7-38-数列求和-加强版（20分）"><a href="#7-38-数列求和-加强版（20分）" class="headerlink" title="7-38 数列求和-加强版（20分）"></a>7-38 数列求和-加强版（20分）</h2><p>给定某数字A（1≤A≤9）以及非负整数N（0≤N≤100000），求数列之和S&#x3D;A+AA+AAA+⋯+AA⋯A（N个A）。例如A&#x3D;1,<br>N&#x3D;3时，S&#x3D;1+11+111&#x3D;123。</p>
+<h2 id="7-38-数列求和-加强版（20分）">7-38 数列求和-加强版（20分）</h2>
+<p>给定某数字A（1≤A≤9）以及非负整数N（0≤N≤100000），求数列之和S=A+AA+AAA+⋯+AA⋯A（N个A）。例如A=1,<br>
+N=3时，S=1+11+111=123。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入数字A与非负整数N。</p>
 <p><strong>输出格式：</strong></p>
