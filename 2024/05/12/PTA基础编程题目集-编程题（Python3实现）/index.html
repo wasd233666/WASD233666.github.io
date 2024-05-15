@@ -25,10 +25,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="PTA基础编程题集-编程题 7-1 厘米换算英尺英寸（15分） 如果已知英制长度的英尺foot和英寸inch的值，那么对应的米是(foot+inch&#x2F;12)×0.3048。现在，如果用户输入的是厘米数，那么对应英制长度的英尺和英寸是多少呢？别忘了1英尺等于12英寸。 输入格式： 输入在一行中给出1个正整数，单位是厘米。 输出格式： 在一行中输出这个厘米数对应英制长度的英尺和英寸的整数值，中间用空格">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/index_img/01.jpg">
 <meta property="article:published_time" content="2024-05-11T16:20:00.000Z">
-<meta property="article:modified_time" content="2024-05-15T06:15:53.067Z">
+<meta property="article:modified_time" content="2024-05-15T06:49:03.464Z">
 <meta property="article:author" content="WASD">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="PTA">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/index_img/01.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -267,7 +271,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/banner_img/01.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -815,10 +819,8 @@ Sum = 30</p>
 </blockquote>
 <p><strong>题解：</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python">T = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>S_a, S_b, t = <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(T):<br>    <span class="hljs-keyword">if</span> i % <span class="hljs-number">10</span> == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> S_b &gt; S_a <span class="hljs-keyword">and</span> t == <span class="hljs-number">0</span>:<br>        t = <span class="hljs-number">30</span><br>    S_a += <span class="hljs-number">3</span><br>    <span class="hljs-keyword">if</span> t == <span class="hljs-number">0</span>:<br>        S_b += <span class="hljs-number">9</span><br>    <span class="hljs-keyword">if</span> t != <span class="hljs-number">0</span>:<br>        t -= <span class="hljs-number">1</span><br><span class="hljs-keyword">if</span> S_a &gt; S_b:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;@_@ <span class="hljs-subst">&#123;S_a&#125;</span>&quot;</span>)<br><span class="hljs-keyword">elif</span> S_b &gt; S_a:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;^_^ <span class="hljs-subst">&#123;S_b&#125;</span>&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;-_- <span class="hljs-subst">&#123;S_a&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
-<h2 id="-2"></h2>
-<p>7-23 币值转换（20分）</p>
-<p>输入一个整数（位数不超过9位）代表一个人民币值（单位为元），请转换成财务要求的大写中文格式。如23108元，转换后变成“贰万叁仟壹百零捌”元。为了简化输出，用小写英文字母a-<br>
-j顺序代表大写数字0-9，用S、B、Q、W、Y分别代表拾、百、仟、万、亿。于是23108元应被转换输出为“cWdQbBai”元。</p>
+<h2 id="7-23-币值转换（20分）">7-23 币值转换（20分）</h2>
+<p>输入一个整数（位数不超过9位）代表一个人民币值（单位为元），请转换成财务要求的大写中文格式。如23108元，转换后变成“贰万叁仟壹百零捌”元。为了简化输出，用小写英文字母a-j顺序代表大写数字0-9，用S、B、Q、W、Y分别代表拾、百、仟、万、亿。于是23108元应被转换输出为“cWdQbBai”元。</p>
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出一个不超过9位的非负整数。</p>
 <p><strong>输出格式：</strong></p>
@@ -1168,6 +1170,15 @@ N=3时，S=1+11+111=123。</p>
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%AE%97%E6%B3%95/" class="print-no-link">#算法</a>
+      
+        <a href="/tags/PTA/" class="print-no-link">#PTA</a>
+      
+    </div>
   
 </div>
 
