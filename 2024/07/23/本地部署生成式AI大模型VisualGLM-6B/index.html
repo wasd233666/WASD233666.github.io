@@ -18,28 +18,28 @@
   <meta name="author" content="WASD">
   <meta name="keywords" content="">
   
-    <meta name="description" content="PAT (Basic Level) Practice 题解（2016年~2018年） 2016年春季考试 2016年秋季考试 2016年冬季考试 2017年春季考试 2017年秋季考试 2017年冬季考试 2018年春季考试 2018年秋季考试 2018年冬季考试">
+    <meta name="description" content="本地部署生成式AI大模型VisualGLM-6B 模型介绍 VisualGLM-6B 是一个开源的，支持图像、中文和英文的多模态对话语言模型，语言模型基于 ChatGLM-6B，具有 62 亿参数；图像部分通过训练 BLIP2-Qformer 构建起视觉模型与语言模型的桥梁，整体模型共78亿参数。 环境准备  获取源码 VisualGLM-6B项目地址 安装 与 GPU 相应版本的 cuda 和对">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PAT (Basic Level) Practice 题解（2016年~2018年）">
-<meta property="og:url" content="http://example.com/2024/07/10/PAT%20(Basic%20Level)%20Practice%20%E9%A2%98%E8%A7%A3%EF%BC%882016%E5%B9%B4~2018%E5%B9%B4%EF%BC%89/index.html">
+<meta property="og:title" content="本地部署生成式AI大模型VisualGLM-6B">
+<meta property="og:url" content="http://example.com/2024/07/23/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E7%94%9F%E6%88%90%E5%BC%8FAI%E5%A4%A7%E6%A8%A1%E5%9E%8BVisualGLM-6B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="PAT (Basic Level) Practice 题解（2016年~2018年） 2016年春季考试 2016年秋季考试 2016年冬季考试 2017年春季考试 2017年秋季考试 2017年冬季考试 2018年春季考试 2018年秋季考试 2018年冬季考试">
+<meta property="og:description" content="本地部署生成式AI大模型VisualGLM-6B 模型介绍 VisualGLM-6B 是一个开源的，支持图像、中文和英文的多模态对话语言模型，语言模型基于 ChatGLM-6B，具有 62 亿参数；图像部分通过训练 BLIP2-Qformer 构建起视觉模型与语言模型的桥梁，整体模型共78亿参数。 环境准备  获取源码 VisualGLM-6B项目地址 安装 与 GPU 相应版本的 cuda 和对">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/index_img/03.jpg">
-<meta property="article:published_time" content="2024-07-10T02:12:20.610Z">
-<meta property="article:modified_time" content="2024-07-18T07:23:58.703Z">
+<meta property="og:image" content="http://example.com/img/index_img/08.jpg">
+<meta property="article:published_time" content="2024-07-23T02:00:00.000Z">
+<meta property="article:modified_time" content="2024-07-23T04:52:42.966Z">
 <meta property="article:author" content="WASD">
 <meta property="article:tag" content="Python">
-<meta property="article:tag" content="C++">
-<meta property="article:tag" content="PAT">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="Hugging Face Hub">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/index_img/03.jpg">
+<meta name="twitter:image" content="http://example.com/img/index_img/08.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>PAT (Basic Level) Practice 题解（2016年~2018年） - Hexo</title>
+  <title>本地部署生成式AI大模型VisualGLM-6B - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -232,13 +232,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner_img/03.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/banner_img/08.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="PAT (Basic Level) Practice 题解（2016年~2018年）"></span>
+            <span id="subtitle" data-typed-text="本地部署生成式AI大模型VisualGLM-6B"></span>
           
         </div>
 
@@ -249,8 +249,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-10 10:12" pubdate>
-           2024 年 07 月 10 日 , 上午 10:12 , 星期三
+        <time datetime="2024-07-23 10:00" pubdate>
+           2024 年 07 月 23 日 , 上午 10:00 , 星期二
         </time>
       </span>
     
@@ -262,7 +262,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          55 字
+          656 字
         
       </span>
     
@@ -274,7 +274,7 @@
         
         
           <!-- compatible with older versions-->
-          1 分钟
+          6 分钟
         
       </span>
     
@@ -311,21 +311,46 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">PAT (Basic Level) Practice 题解（2016年~2018年）</h1>
+            <h1 id="seo-header">本地部署生成式AI大模型VisualGLM-6B</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>PAT (Basic Level) Practice 题解（2016年~2018年）</h1>
-<h2 id="2016年春季考试">2016年春季考试</h2>
-<h2 id="2016年秋季考试">2016年秋季考试</h2>
-<h2 id="2016年冬季考试">2016年冬季考试</h2>
-<h2 id="2017年春季考试">2017年春季考试</h2>
-<h2 id="2017年秋季考试">2017年秋季考试</h2>
-<h2 id="2017年冬季考试">2017年冬季考试</h2>
-<h2 id="2018年春季考试">2018年春季考试</h2>
-<h2 id="2018年秋季考试">2018年秋季考试</h2>
-<h2 id="2018年冬季考试">2018年冬季考试</h2>
+                <h1>本地部署生成式AI大模型VisualGLM-6B</h1>
+<h2 id="模型介绍">模型介绍</h2>
+<p>VisualGLM-6B 是一个开源的，支持图像、中文和英文的多模态对话语言模型，语言模型基于 ChatGLM-6B，具有 62 亿参数；图像部分通过训练 BLIP2-Qformer 构建起视觉模型与语言模型的桥梁，整体模型共78亿参数。</p>
+<h2 id="环境准备">环境准备</h2>
+<ul>
+<li>获取源码<br>
+<a target="_blank" rel="noopener" href="https://github.com/THUDM/VisualGLM-6B" title="VisualGLM-6B项目地址">VisualGLM-6B项目地址</a></li>
+<li>安装 与 GPU 相应版本的 cuda 和对应的 Pytorch</li>
+<li>安装依赖</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">pip install -i https://mirrors.aliyun.com/pypi/simple/ -r requirements.txt<br></code></pre></td></tr></table></figure>
+<ul>
+<li>下载模型<br>
+该项目有两种使用方式，sat模型和Huggingface模型<br>
+运行该测试代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, AutoModel<br><br>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;THUDM/visualglm-6b&quot;</span>, trust_remote_code=<span class="hljs-literal">True</span>)<br>model = AutoModel.from_pretrained(<span class="hljs-string">&quot;THUDM/visualglm-6b&quot;</span>, trust_remote_code=<span class="hljs-literal">True</span>).half().cuda()<br>image_path = <span class="hljs-string">&quot;your image path&quot;</span><br>response, history = model.chat(tokenizer, image_path, <span class="hljs-string">&quot;描述这张图片。&quot;</span>, history=[])<br><span class="hljs-built_in">print</span>(response)<br>response, history = model.chat(tokenizer, image_path, <span class="hljs-string">&quot;这张图片可能是在什么场所拍摄的？&quot;</span>, history=history)<br><span class="hljs-built_in">print</span>(response)<br></code></pre></td></tr></table></figure>
+<p>或者运行项目下<code>cli_demo.py</code>，都会由 transformers 自动下载模型实现和参数（下载到 .sat_models）。但由于下载速度太慢，且经常中断，于是尝试获取Huggingface模型。<br>
+项目完整的模型实现可以从 Hugging Face Hub 下载：<a target="_blank" rel="noopener" href="https://huggingface.co/THUDM/visualglm-6b" title="获取地址">获取地址</a>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sehll">git lfs install<br>git clone https://huggingface.co/THUDM/visualglm-6b<br></code></pre></td></tr></table></figure>
+<p>但由于网络问题，无法连接到 Hugging Face Hub，于是只能再换种方式，先将模型下载到本地，然后从本地加载。<br>
+先在项目根目录下创建visualglm-6b文件夹，然后从清华大学官网上<a target="_blank" rel="noopener" href="https://cloud.tsinghua.edu.cn/d/43ffb021ca5f4897b56a/" title="下载模型参数文件">下载模型参数文件</a>，接着从<a target="_blank" rel="noopener" href="https://huggingface.co/THUDM/visualglm-6b" title="Hugging Face Hub">Hugging Face Hub</a>把除了五个模型参数文件以外的所有文件下载下来，都放到visualglm-6b文件夹里。</p>
+<h2 id="测试">测试</h2>
+<p>首先<strong>更改代码里调用文件的路径</strong>，把所有出现<code>THUDM/visualglm-6b</code>的地方全部换成<code>visualglm-6b</code>。</p>
+<p>尝试运行<code>cli_demo.py</code>，发现运行失败，查阅一些博客后，发现原因是从Hugging Face Hub下载的文件是不含有以下：<br>
+<code>mp_rank_00_model_states.pt</code>、<code>latest</code>、<code>model_config.json</code>这三个文件的。</p>
+<p>找到了有人在百度网盘分享的资源：<br>
+<code>链接：https://pan.baidu.com/s/1yVPN65BXs04D-OXWqp8NCQ?pwd=lmh0 提取码：lmh0</code><br>
+下载后将里面的一个文件夹和两个文件都放到visualglm-6b文件夹中。</p>
+<p>再次运行cli_demo.py文件，发现出现了新的报错</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">AttributeError: <span class="hljs-string">&#x27;ChatGLMTokenizer&#x27;</span> <span class="hljs-keyword">object</span> has <span class="hljs-keyword">no</span> attribut<span class="hljs-string">e&#x27;sp_tokenizer&#x27;</span>. Did you mean: <span class="hljs-string">&#x27;_tokenize&#x27;</span>?<br>    <span class="hljs-keyword">return</span> self.sp_tokenizer.num_tokens<br></code></pre></td></tr></table></figure>
+<p>在查阅很多博客后，最后在Hugging Face Hub的一个帖子中找到了成功的解决方法：<br>
+修改tokenization_chatglm.py中的ChatGLMTokenizer类，将该类中__init__方法的定义，把super.__init__这一行放到__init__方法的最后。</p>
+<p>修改后，再次运行cli_demo.py，发现此时可以在终端上进行对话了！<br>
+<img src="/img/blog_img/02.png" srcset="/img/loading.gif" lazyload alt="测试示例"></p>
 
                 
               </div>
@@ -344,7 +369,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%BC%96%E7%A8%8B%E9%A2%98%E8%A7%A3/" class="category-chain-item">编程题解</a>
+  <a href="/categories/%E9%9B%95%E8%99%AB%E5%B0%8F%E6%8A%80/" class="category-chain-item">雕虫小技</a>
   
   
 
@@ -361,9 +386,9 @@
       
         <a href="/tags/Python/" class="print-no-link">#Python</a>
       
-        <a href="/tags/C/" class="print-no-link">#C++</a>
+        <a href="/tags/AI/" class="print-no-link">#AI</a>
       
-        <a href="/tags/PAT/" class="print-no-link">#PAT</a>
+        <a href="/tags/Hugging-Face-Hub/" class="print-no-link">#Hugging Face Hub</a>
       
     </div>
   
@@ -375,8 +400,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>PAT (Basic Level) Practice 题解（2016年~2018年）</div>
-      <div>http://example.com/2024/07/10/PAT (Basic Level) Practice 题解（2016年~2018年）/</div>
+      <div>本地部署生成式AI大模型VisualGLM-6B</div>
+      <div>http://example.com/2024/07/23/本地部署生成式AI大模型VisualGLM-6B/</div>
     </div>
     <div class="license-meta">
       
@@ -388,7 +413,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月10日</div>
+          <div>2024年7月23日</div>
         </div>
       
       
@@ -420,18 +445,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/10/PAT%20(Basic%20Level)%20Practice%20%E9%A2%98%E8%A7%A3%EF%BC%882019~2021%E5%B9%B4%EF%BC%89/" title="PAT (Basic Level) Practice 题解（2019年~2021年）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">PAT (Basic Level) Practice 题解（2019年~2021年）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/07/08/PAT%20(Basic%20Level)%20Practice%20%E9%A2%98%E8%A7%A3%EF%BC%882013%E5%B9%B4~2015%E5%B9%B4%EF%BC%89/" title="PAT (Basic Level) Practice 题解（2013年~2015年）">
-                        <span class="hidden-mobile">PAT (Basic Level) Practice 题解（2013年~2015年）</span>
+                      <a href="/2024/07/18/Django%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="Django项目部署到服务器">
+                        <span class="hidden-mobile">Django项目部署到服务器</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
