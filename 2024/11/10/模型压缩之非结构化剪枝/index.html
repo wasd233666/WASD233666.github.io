@@ -18,28 +18,26 @@
   <meta name="author" content="宇翊">
   <meta name="keywords" content="">
   
-    <meta name="description" content="模型介绍 VisualGLM-6B 是一个开源的，支持图像、中文和英文的多模态对话语言模型，语言模型基于 ChatGLM-6B，具有 62 亿参数；图像部分通过训练 BLIP2-Qformer 构建起视觉模型与语言模型的桥梁，整体模型共78亿参数。 环境准备  获取源码 VisualGLM-6B项目地址 安装 与 GPU 相应版本的 cuda 和对应的 Pytorch 安装依赖  1pip ins">
+    <meta name="description" content="本文的代码参考Pytorch的官方文档，将利用torch.nn.utils.prune 对LeNet网络进行简单的非结构化剪枝。 构建网络 （一）首先利用pytorch构建LeNet网络。 1234567891011121314151617181920212223242526import torchfrom torch import nnimport torch.nn.utils.prune as">
 <meta property="og:type" content="article">
-<meta property="og:title" content="本地部署生成式AI大模型VisualGLM-6B">
-<meta property="og:url" content="http://example.com/2024/07/23/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E7%94%9F%E6%88%90%E5%BC%8FAI%E5%A4%A7%E6%A8%A1%E5%9E%8BVisualGLM-6B/index.html">
+<meta property="og:title" content="模型压缩之非结构化剪枝">
+<meta property="og:url" content="http://example.com/2024/11/10/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9%E4%B9%8B%E9%9D%9E%E7%BB%93%E6%9E%84%E5%8C%96%E5%89%AA%E6%9E%9D/index.html">
 <meta property="og:site_name" content="八度空间">
-<meta property="og:description" content="模型介绍 VisualGLM-6B 是一个开源的，支持图像、中文和英文的多模态对话语言模型，语言模型基于 ChatGLM-6B，具有 62 亿参数；图像部分通过训练 BLIP2-Qformer 构建起视觉模型与语言模型的桥梁，整体模型共78亿参数。 环境准备  获取源码 VisualGLM-6B项目地址 安装 与 GPU 相应版本的 cuda 和对应的 Pytorch 安装依赖  1pip ins">
+<meta property="og:description" content="本文的代码参考Pytorch的官方文档，将利用torch.nn.utils.prune 对LeNet网络进行简单的非结构化剪枝。 构建网络 （一）首先利用pytorch构建LeNet网络。 1234567891011121314151617181920212223242526import torchfrom torch import nnimport torch.nn.utils.prune as">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/index_img/08.jpg">
-<meta property="article:published_time" content="2024-07-23T02:00:00.000Z">
-<meta property="article:modified_time" content="2024-08-17T01:00:31.596Z">
+<meta property="og:image" content="http://example.com/img/index_img/05.jpg">
+<meta property="article:published_time" content="2024-11-10T02:00:00.000Z">
+<meta property="article:modified_time" content="2024-11-10T02:02:21.130Z">
 <meta property="article:author" content="宇翊">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="AI">
-<meta property="article:tag" content="Hugging Face Hub">
+<meta property="article:tag" content="深度学习，CNN">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/index_img/08.jpg">
+<meta name="twitter:image" content="http://example.com/img/index_img/05.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>本地部署生成式AI大模型VisualGLM-6B - 八度空间</title>
+  <title>模型压缩之非结构化剪枝 - 八度空间</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -352,13 +350,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/banner_img/08.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/banner_img/05.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="本地部署生成式AI大模型VisualGLM-6B"></span>
+            <span id="subtitle" data-typed-text="模型压缩之非结构化剪枝"></span>
           
         </div>
 
@@ -369,8 +367,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-23 10:00" pubdate>
-           2024 年 07 月 23 日 , 上午 10:00 , 星期二
+        <time datetime="2024-11-10 10:00" pubdate>
+           2024 年 11 月 10 日 , 上午 10:00 , 星期日
         </time>
       </span>
     
@@ -382,7 +380,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          645 字
+          1.4k 字
         
       </span>
     
@@ -394,7 +392,7 @@
         
         
           <!-- compatible with older versions-->
-          6 分钟
+          12 分钟
         
       </span>
     
@@ -431,45 +429,41 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">本地部署生成式AI大模型VisualGLM-6B</h1>
+            <h1 id="seo-header">模型压缩之非结构化剪枝</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="模型介绍">模型介绍</h2>
-<p>VisualGLM-6B 是一个开源的，支持图像、中文和英文的多模态对话语言模型，语言模型基于 ChatGLM-6B，具有 62 亿参数；图像部分通过训练 BLIP2-Qformer 构建起视觉模型与语言模型的桥梁，整体模型共78亿参数。</p>
-<h2 id="环境准备">环境准备</h2>
-<ul>
-<li>获取源码<br>
-<a target="_blank" rel="noopener" href="https://github.com/THUDM/VisualGLM-6B" title="VisualGLM-6B项目地址">VisualGLM-6B项目地址</a></li>
-<li>安装 与 GPU 相应版本的 cuda 和对应的 Pytorch</li>
-<li>安装依赖</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">pip install -i https://mirrors.aliyun.com/pypi/simple/ -r requirements.txt<br></code></pre></td></tr></table></figure>
-<ul>
-<li>下载模型<br>
-该项目有两种使用方式，sat模型和Huggingface模型<br>
-运行该测试代码</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> transformers <span class="hljs-keyword">import</span> AutoTokenizer, AutoModel<br><br>tokenizer = AutoTokenizer.from_pretrained(<span class="hljs-string">&quot;THUDM/visualglm-6b&quot;</span>, trust_remote_code=<span class="hljs-literal">True</span>)<br>model = AutoModel.from_pretrained(<span class="hljs-string">&quot;THUDM/visualglm-6b&quot;</span>, trust_remote_code=<span class="hljs-literal">True</span>).half().cuda()<br>image_path = <span class="hljs-string">&quot;your image path&quot;</span><br>response, history = model.chat(tokenizer, image_path, <span class="hljs-string">&quot;描述这张图片。&quot;</span>, history=[])<br><span class="hljs-built_in">print</span>(response)<br>response, history = model.chat(tokenizer, image_path, <span class="hljs-string">&quot;这张图片可能是在什么场所拍摄的？&quot;</span>, history=history)<br><span class="hljs-built_in">print</span>(response)<br></code></pre></td></tr></table></figure>
-<p>或者运行项目下<code>cli_demo.py</code>，都会由 transformers 自动下载模型实现和参数（下载到 .sat_models）。但由于下载速度太慢，且经常中断，于是尝试获取Huggingface模型。<br>
-项目完整的模型实现可以从 Hugging Face Hub 下载：<a target="_blank" rel="noopener" href="https://huggingface.co/THUDM/visualglm-6b" title="获取地址">获取地址</a>。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">git lfs install<br>git clone https://huggingface.co/THUDM/visualglm-6b<br></code></pre></td></tr></table></figure>
-<p>但由于网络问题，无法连接到 Hugging Face Hub，于是只能再换种方式，先将模型下载到本地，然后从本地加载。<br>
-先在项目根目录下创建visualglm-6b文件夹，然后从清华大学官网上<a target="_blank" rel="noopener" href="https://cloud.tsinghua.edu.cn/d/43ffb021ca5f4897b56a/" title="下载模型参数文件">下载模型参数文件</a>，接着从<a target="_blank" rel="noopener" href="https://huggingface.co/THUDM/visualglm-6b" title="Hugging Face Hub">Hugging Face Hub</a>把除了五个模型参数文件以外的所有文件下载下来，都放到visualglm-6b文件夹里。</p>
-<h2 id="测试">测试</h2>
-<p>首先<strong>更改代码里调用文件的路径</strong>，把所有出现<code>THUDM/visualglm-6b</code>的地方全部换成<code>visualglm-6b</code>。</p>
-<p>尝试运行<code>cli_demo.py</code>，发现运行失败，查阅一些博客后，发现原因是从Hugging Face Hub下载的文件是不含有以下：<br>
-<code>mp_rank_00_model_states.pt</code>、<code>latest</code>、<code>model_config.json</code>这三个文件的。</p>
-<p>找到了有人在百度网盘分享的资源：<br>
-<code>链接：https://pan.baidu.com/s/1yVPN65BXs04D-OXWqp8NCQ?pwd=lmh0 提取码：lmh0</code><br>
-下载后将里面的一个文件夹和两个文件都放到visualglm-6b文件夹中。</p>
-<p>再次运行cli_demo.py文件，发现出现了新的报错</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">AttributeError: <span class="hljs-string">&#x27;ChatGLMTokenizer&#x27;</span> <span class="hljs-keyword">object</span> has <span class="hljs-keyword">no</span> attribut<span class="hljs-string">e&#x27;sp_tokenizer&#x27;</span>. Did you mean: <span class="hljs-string">&#x27;_tokenize&#x27;</span>?<br>    <span class="hljs-keyword">return</span> self.sp_tokenizer.num_tokens<br></code></pre></td></tr></table></figure>
-<p>在查阅很多博客后，最后在Hugging Face Hub的一个帖子中找到了成功的解决方法：<br>
-修改tokenization_chatglm.py中的ChatGLMTokenizer类，将该类中__init__方法的定义，把super.__init__这一行放到__init__方法的最后。</p>
-<p>修改后，再次运行cli_demo.py，发现此时可以在终端上进行对话了！<br>
-<img src="/img/blog_img/02.png" srcset="/img/loading.gif" lazyload alt="测试示例"></p>
+                <p>本文的代码参考Pytorch的官方文档，将利用<code>torch.nn.utils.prune</code> 对<strong>LeNet</strong>网络进行简单的非结构化剪枝。</p>
+<h2 id="构建网络">构建网络</h2>
+<p>（一）首先利用pytorch构建LeNet网络。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn<br><span class="hljs-keyword">import</span> torch.nn.utils.prune <span class="hljs-keyword">as</span> prune<br><span class="hljs-keyword">import</span> torch.nn.functional <span class="hljs-keyword">as</span> F<br><br>device = torch.device(<span class="hljs-string">&quot;cuda&quot;</span> <span class="hljs-keyword">if</span> torch.cuda.is_available() <span class="hljs-keyword">else</span> <span class="hljs-string">&quot;cpu&quot;</span>)<br><br><span class="hljs-string">&#x27;&#x27;&#x27;搭建类LeNet网络&#x27;&#x27;&#x27;</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">LeNet</span>(nn.Module):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>(LeNet, self).__init__()<br>        <span class="hljs-comment"># 单通道图像输入，5×5核尺寸</span><br>        self.conv1 = nn.Conv2d(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>)<br>        self.conv2 = nn.Conv2d(<span class="hljs-number">3</span>, <span class="hljs-number">16</span>, <span class="hljs-number">5</span>)<br>        self.fc1 = nn.Linear(<span class="hljs-number">16</span> * <span class="hljs-number">5</span> * <span class="hljs-number">5</span>, <span class="hljs-number">120</span>)  <br>        self.fc2 = nn.Linear(<span class="hljs-number">120</span>, <span class="hljs-number">84</span>)<br>        self.fc3 = nn.Linear(<span class="hljs-number">84</span>, <span class="hljs-number">10</span>)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">forward</span>(<span class="hljs-params">self, x</span>):<br>        x = F.max_pool2d(F.relu(self.conv1(x)), (<span class="hljs-number">2</span>, <span class="hljs-number">2</span>))<br>        x = F.max_pool2d(F.relu(self.conv2(x)), <span class="hljs-number">2</span>)<br>        x = x.view(-<span class="hljs-number">1</span>, <span class="hljs-built_in">int</span>(x.nelement() / x.shape[<span class="hljs-number">0</span>]))<br>        x = F.relu(self.fc1(x))<br>        x = F.relu(self.fc2(x))<br>        x = self.fc3(x)<br>        <span class="hljs-keyword">return</span> x<br></code></pre></td></tr></table></figure>
+<p>（二）检查一下 LeNet 模型中的（未修剪的）<code>conv1</code> 层。目前，它将包含两个参数 <code>weight</code> 和 <code>bias</code>，并且没有缓冲区。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">model = LeNet().to(device=device)  <br>module = model.conv1  <br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>(module.named_parameters()))  <span class="hljs-comment"># 6×5×5的weight + 6×1的bias的参数量  </span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;缓冲区数据&quot;</span>,<span class="hljs-built_in">list</span>(module.buffers()))<br></code></pre></td></tr></table></figure>
+<p>输出结果为：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs shell">[(&#x27;weight&#x27;, Parameter containing:<br>tensor([[[[-0.0426,  0.0484,  0.1017,  0.1121, -0.1006],<br>          [ 0.0331, -0.1987, -0.1086, -0.1192, -0.0110],<br>          [-0.1936, -0.1147,  0.1996, -0.1037,  0.1867],<br>          [-0.0421, -0.0335,  0.1311, -0.0288, -0.0255],<br>          [-0.0813,  0.1808, -0.0249,  0.0391,  0.0366]]],<br><br><br>        [[[ 0.1849, -0.0134,  0.0179,  0.1418, -0.0976],<br>          [ 0.1434,  0.1474, -0.1411,  0.0249, -0.0897],<br>          [-0.0883,  0.1737, -0.0129, -0.0149, -0.1859],<br>          [ 0.0785,  0.0987, -0.0586,  0.1122, -0.0971],<br>          [ 0.1047, -0.1525, -0.1976, -0.1608, -0.1663]]],<br><br><br>        [[[ 0.1888, -0.1422,  0.0301,  0.1819, -0.0373],<br>          [-0.1539,  0.0132, -0.0212, -0.0218,  0.0697],<br>          [-0.0047,  0.1448, -0.1159,  0.1579,  0.1058],<br>          [ 0.0174, -0.0594, -0.0707, -0.1932,  0.0553],<br>          [ 0.0547,  0.0925, -0.1236,  0.0261, -0.0983]]]], device=&#x27;cuda:0&#x27;,<br>       requires_grad=True)), (&#x27;bias&#x27;, Parameter containing:<br>tensor([ 0.1476,  0.1939, -0.0868], device=&#x27;cuda:0&#x27;, requires_grad=True))]<br>缓冲区数据 []<br></code></pre></td></tr></table></figure>
+<h2 id="对选定模块进行非结构化剪枝">对选定模块进行非结构化剪枝</h2>
+<p>（一）选用随机非结构化剪枝来删除module(conv1)中weight的参数，剪枝比例为30% 。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">prune.random_unstructured(module,name=<span class="hljs-string">&#x27;weight&#x27;</span>,amount=<span class="hljs-number">0.3</span>)  <br></code></pre></td></tr></table></figure>
+<p>修剪的作用是从参数中删除<code>weight</code>并将其替换为名为 <code>weight_orig</code> 的新参数。<code>weight_orig</code> 存储张量的未修剪版本。<code>bias</code>未被修剪，因此它将保持不变。</p>
+<p>（二）查看剪枝后module的参数。</p>
+<p>查看缓冲区的mask掩码矩阵：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>(module.buffers()))<br></code></pre></td></tr></table></figure>
+<p>输出结果为：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs shell">[tensor([[[[1., 1., 1., 1., 1.],<br>          [1., 1., 1., 1., 1.],<br>          [0., 1., 1., 1., 0.],<br>          [1., 1., 0., 1., 1.],<br>          [1., 0., 1., 1., 1.]]],<br><br><br>        [[[1., 0., 1., 0., 1.],<br>          [0., 1., 1., 1., 1.],<br>          [0., 0., 0., 0., 1.],<br>          [1., 1., 0., 1., 1.],<br>          [0., 0., 1., 0., 1.]]],<br><br><br>        [[[1., 0., 1., 1., 1.],<br>          [1., 1., 1., 1., 1.],<br>          [1., 0., 0., 0., 1.],<br>          [1., 0., 1., 1., 0.],<br>          [1., 1., 1., 1., 0.]]]], device=&#x27;cuda:0&#x27;)]<br></code></pre></td></tr></table></figure>
+<p><strong>mask中的0代表被剪枝，1代表未被剪枝</strong>。<br>
+mask掩码是一个与张量形状相同的布尔类型的张量，掩码的值为 True 表示相应位置的权重需要保留，掩码的值为 False 表示相应位置的权重可以被删除。</p>
+<p>查看剪枝后的<code>weight</code>参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(module.weight)<br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs shell">tensor([[[[ 0.1721, -0.1317, -0.0388, -0.0026, -0.1950],<br>          [ 0.0686,  0.1640, -0.0698, -0.1303, -0.0142],<br>          [-0.0000,  0.0591,  0.0150,  0.1341,  0.0000],<br>          [-0.0659,  0.0252, -0.0000, -0.0493, -0.1542],<br>          [-0.1267,  0.0000, -0.1662, -0.0298,  0.0149]]],<br><br><br>        [[[ 0.0806, -0.0000,  0.0627, -0.0000,  0.1882],<br>          [-0.0000, -0.1960, -0.0576, -0.1033, -0.1302],<br>          [-0.0000,  0.0000,  0.0000, -0.0000, -0.1340],<br>          [ 0.0503, -0.1361, -0.0000,  0.1411, -0.0748],<br>          [-0.0000, -0.0000,  0.1841,  0.0000, -0.1668]]],<br><br><br>        [[[ 0.1188,  0.0000, -0.0050, -0.1513,  0.1349],<br>          [ 0.1029, -0.1400,  0.0581, -0.0549, -0.0785],<br>          [-0.1862, -0.0000,  0.0000, -0.0000, -0.1676],<br>          [ 0.1452, -0.0000,  0.0406,  0.0851,  0.0000],<br>          [-0.1028, -0.0767,  0.0999,  0.0909, -0.0000]]]], device=&#x27;cuda:0&#x27;,<br>       grad_fn=&lt;MulBackward0&gt;)<br></code></pre></td></tr></table></figure>
+<p>可见原先值接近0的一些微小权重被置为0了，即被剪掉了。</p>
+<p>（三）基于 L1 范数对<code>bias</code> 进行非结构化剪枝。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">prune.l1_unstructured(module, name=<span class="hljs-string">&quot;bias&quot;</span>, amount=<span class="hljs-number">1</span>)<br></code></pre></td></tr></table></figure>
+<p>查看剪枝后的模型参数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>(module.named_parameters()))<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>(module.named_buffers())) <span class="hljs-built_in">print</span>(module.bias) <span class="hljs-built_in">print</span>(module._forward_pre_hooks)<br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs shell">[(&#x27;weight_orig&#x27;, Parameter containing:<br>tensor([[[[ 0.1721, -0.1317, -0.0388, -0.0026, -0.1950],<br>          [ 0.0686,  0.1640, -0.0698, -0.1303, -0.0142],<br>          [-0.1103,  0.0591,  0.0150,  0.1341,  0.1762],<br>          [-0.0659,  0.0252, -0.0646, -0.0493, -0.1542],<br>          [-0.1267,  0.1200, -0.1662, -0.0298,  0.0149]]],<br><br><br>        [[[ 0.0806, -0.1265,  0.0627, -0.1077,  0.1882],<br>          [-0.0552, -0.1960, -0.0576, -0.1033, -0.1302],<br>          [-0.1169,  0.0075,  0.0677, -0.0989, -0.1340],<br>          [ 0.0503, -0.1361, -0.0619,  0.1411, -0.0748],<br>          [-0.1270, -0.0742,  0.1841,  0.1358, -0.1668]]],<br><br><br>        [[[ 0.1188,  0.0127, -0.0050, -0.1513,  0.1349],<br>          [ 0.1029, -0.1400,  0.0581, -0.0549, -0.0785],<br>          [-0.1862, -0.1332,  0.0176, -0.1262, -0.1676],<br>          [ 0.1452, -0.1883,  0.0406,  0.0851,  0.1230],<br>          [-0.1028, -0.0767,  0.0999,  0.0909, -0.0033]]]], device=&#x27;cuda:0&#x27;,<br>       requires_grad=True)), (&#x27;bias_orig&#x27;, Parameter containing:<br>tensor([-0.0934,  0.0493, -0.0568], device=&#x27;cuda:0&#x27;, requires_grad=True))]<br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs shell">[(&#x27;weight_mask&#x27;, tensor([[[[1., 1., 1., 1., 1.],<br>          [1., 1., 1., 1., 1.],<br>          [0., 1., 1., 1., 0.],<br>          [1., 1., 0., 1., 1.],<br>          [1., 0., 1., 1., 1.]]],<br><br><br>        [[[1., 0., 1., 0., 1.],<br>          [0., 1., 1., 1., 1.],<br>          [0., 0., 0., 0., 1.],<br>          [1., 1., 0., 1., 1.],<br>          [0., 0., 1., 0., 1.]]],<br><br><br>        [[[1., 0., 1., 1., 1.],<br>          [1., 1., 1., 1., 1.],<br>          [1., 0., 0., 0., 1.],<br>          [1., 0., 1., 1., 0.],<br>          [1., 1., 1., 1., 0.]]]], device=&#x27;cuda:0&#x27;)), (&#x27;bias_mask&#x27;, tensor([1., 0., 1.], device=&#x27;cuda:0&#x27;))]<br>tensor([-0.0934,  0.0000, -0.0568], device=&#x27;cuda:0&#x27;, grad_fn=&lt;MulBackward0&gt;)<br>OrderedDict(&#123;2: &lt;torch.nn.utils.prune.RandomUnstructured object at 0x0000021F4B687D40&gt;, 3: &lt;torch.nn.utils.prune.L1Unstructured object at 0x0000021F4B6A38F0&gt;&#125;)<br></code></pre></td></tr></table></figure>
+<p><strong>总结：</strong> 首先搭建了一个类LeNet网络模型，选取了LeNet的conv1模块，该模块参数包含为3×5×5的weight卷积核参数和3×1的bias参数。利用<strong>torch.nn.prune</strong>中的剪枝方法，实现了对weight参数进行30%随机非结构化剪枝，以及对bias的L1非结构化剪枝。</p>
 
                 
               </div>
@@ -488,7 +482,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%9B%95%E8%99%AB%E5%B0%8F%E6%8A%80/" class="category-chain-item">雕虫小技</a>
+  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="category-chain-item">深度学习</a>
   
   
 
@@ -503,11 +497,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
-      
-        <a href="/tags/AI/" class="print-no-link">#AI</a>
-      
-        <a href="/tags/Hugging-Face-Hub/" class="print-no-link">#Hugging Face Hub</a>
+        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%8CCNN/" class="print-no-link">#深度学习，CNN</a>
       
     </div>
   
@@ -519,8 +509,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>本地部署生成式AI大模型VisualGLM-6B</div>
-      <div>http://example.com/2024/07/23/本地部署生成式AI大模型VisualGLM-6B/</div>
+      <div>模型压缩之非结构化剪枝</div>
+      <div>http://example.com/2024/11/10/模型压缩之非结构化剪枝/</div>
     </div>
     <div class="license-meta">
       
@@ -532,7 +522,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月23日</div>
+          <div>2024年11月10日</div>
         </div>
       
       
@@ -564,18 +554,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/10/%E6%A8%A1%E5%9E%8B%E5%8E%8B%E7%BC%A9%E4%B9%8B%E9%9D%9E%E7%BB%93%E6%9E%84%E5%8C%96%E5%89%AA%E6%9E%9D/" title="模型压缩之非结构化剪枝">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">模型压缩之非结构化剪枝</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/07/18/Django%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="Django项目部署到服务器">
-                        <span class="hidden-mobile">Django项目部署到服务器</span>
+                      <a href="/2024/07/23/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E7%94%9F%E6%88%90%E5%BC%8FAI%E5%A4%A7%E6%A8%A1%E5%9E%8BVisualGLM-6B/" title="本地部署生成式AI大模型VisualGLM-6B">
+                        <span class="hidden-mobile">本地部署生成式AI大模型VisualGLM-6B</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
